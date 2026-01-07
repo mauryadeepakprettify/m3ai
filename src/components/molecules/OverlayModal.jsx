@@ -1,21 +1,16 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 const OverlayModal = ({ content, state, className }) => {
-  const [isModal, setIsModal] = useState(false);
-
-  useEffect(() => {
-    setIsModal(state);
-  }, [state]);
+  const { isModal } = useSelector((state) => state.modal);
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex items-center justify-center transition-all duration-500 ease-in-out bg-black/50 ${isModal ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
-      onClick={() => setIsModal(false)}
+      className={`fixed inset-0 z-50 flex items-center justify-center bg-black/50 transition-all duration-500 ease-in-out ${isModal ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
     >
       <div
-        className={`relative transition-all duration-500 ease-in-out bg-[#0C1739] ${className}`}
+        className={`relative bg-[#0C1739] transition-all duration-500 ease-in-out ${className}`}
         onClick={(e) => e.stopPropagation()}
       >
         {content}
