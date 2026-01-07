@@ -1,26 +1,85 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --font-roobert: var(--font-roobert);
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-primary: #57dde6;
+  --color-secondary: #3853a3;
+  --color-alpha: #ffffffb2;
+  --color-beta: #ffffff80;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --animate-floatUpDown: floatUpDown 2s ease-in-out infinite;
+
+  @keyframes floatUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-40px);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  html {
+    @apply scroll-pt-[78px] scroll-smooth leading-none;
+  }
+
+  body {
+    @apply font-roobert bg-black;
+  }
+
+  body::-webkit-scrollbar {
+    @apply w-[8px];
+  }
+
+  body::-webkit-scrollbar-track {
+    @apply shadow-none;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    @apply bg-primary;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-full px-4 sm:px-18 lg:px-24;
+    @apply sm:max-w-screen-sm md:max-w-3xl lg:max-w-5xl xl:max-w-7xl 2xl:max-w-7xl!;
+  }
+
+  .container-b {
+    @apply mx-auto max-w-6xl px-4 sm:px-6 lg:px-8;
+    @apply sm:max-w-screen-sm md:max-w-3xl lg:max-w-5xl xl:max-w-7xl 2xl:max-w-7xl!;
+  }
+
+  .swiper-pagination {
+    @apply -bottom-16! text-white!;
+  }
+
+  .swiper-pagination-current,
+  .swiper-pagination-total {
+    @apply text-lg font-semibold text-white;
+  }
+
+  .swiper-button-disabled {
+    @apply hidden;
+  }
+
+  .swiper-pagination-fraction{
+    @apply top-auto! -bottom-1! h-fit!;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    @apply bg-linear-to-r from-[#3853A3] from-[19.23%] via-[#55A5D9] via-[66.83%] to-[#57DDE6] to-[94.23%];
+  }
+
+  .gradient-secondary {
+    @apply bg-linear-to-r from-[#3853A3] to-[#55A5D9];
+  }
 }
