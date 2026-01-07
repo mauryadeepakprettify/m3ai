@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useSelector } from "react-redux";
 
-const OverlayModal = ({ content, state, className }) => {
+const OverlayModal = ({ content, className }) => {
   const { isModal } = useSelector((state) => state.modal);
 
   return (
