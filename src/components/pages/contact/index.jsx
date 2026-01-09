@@ -1,7 +1,13 @@
+import ContactEnquire from "./Enquire";
+import ContactInfo from "./Info";
+
 const ContactPage = () => {
-  return <>
-  <div></div>
-  </>;
+  return (
+    <>
+      <ContactInfo />
+      <ContactEnquire />
+    </>
+  );
 };
 
 export default ContactPage;

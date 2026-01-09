@@ -17,8 +17,7 @@ const Hero = ({ video, title, tagline, className, scrollTo }) => {
         className={`absolute right-0 bottom-1/2 left-0 container flex translate-y-1/2 flex-col items-center justify-center gap-2`}
       >
         {tagline && (
-          <h6 className="max-w-[600px] text-center text-[28px] leading-snug font-semibold text-white">
-            {tagline}
+          <h6 dangerouslySetInnerHTML={{ __html: tagline }} className="max-w-[600px] text-center text-[28px] leading-snug font-semibold text-white">
           </h6>
         )}
         {title && (

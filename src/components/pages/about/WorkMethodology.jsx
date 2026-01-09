@@ -7,7 +7,7 @@ import { SwiperSlide } from "swiper/react";
 
 const WorkMethodology = () => {
   return (
-    <section className="relative overflow-hidden py-10 sm:py-12 lg:pb-20">
+    <section className="relative py-10 sm:py-12 lg:pb-20">
       <Gradient className="top-[80%] left-1/2 bg-[#104AF7] blur-[300px]" />
 
       <div className="container-b">

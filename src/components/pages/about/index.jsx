@@ -2,6 +2,8 @@ import Hero from "@/components/organisms/Hero";
 import Overview from "./Overview";
 import WorkEthics from "./WorkEthics";
 import WorkMethodology from "./WorkMethodology";
+import FounderMessage from "./FounderMessage";
+import Team from "./Team";
 
 const AboutPage = () => {
   return (
@@ -14,6 +16,8 @@ const AboutPage = () => {
       <Overview />
       <WorkEthics />
       <WorkMethodology />
+      <FounderMessage />
+      <Team />
     </>
   );
 };
