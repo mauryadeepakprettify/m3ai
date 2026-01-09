@@ -9,7 +9,7 @@ import IndustryCard from "@/components/molecules/IndustryCard";
 
 const Sectors = () => {
   return (
-    <section className="relative overflow-hidden py-10 pb-32 sm:pt-12 lg:pt-15">
+    <section className="relative overflow-hidden py-10 pb-32 sm:pt-12 lg:pt-16">
       <Gradient className="top-[80%] left-1/2 bg-[#104AF7] blur-[300px]" />
       <div className="container">
         <Heading className="mb-18">AI-Powered Impact Across Sectors</Heading>
