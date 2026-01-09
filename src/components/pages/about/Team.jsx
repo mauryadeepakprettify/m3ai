@@ -2,14 +2,17 @@
 import Gradient from "@/components/atoms/Gradient";
 import Heading from "@/components/atoms/Heading";
 import Slider from "@/components/molecules/Slider";
+import { useModal } from "@/hooks/useModal";
 import Image from "next/image";
 import { Navigation } from "swiper/modules";
 import { SwiperSlide } from "swiper/react";
 
 const Team = () => {
+  const { openModal } = useModal();
+
   return (
-    <section className="py-20 relative">
-        <Gradient className="top-[60%] left-1/2 bg-secondary blur-[200px]" />
+    <section className="relative py-20">
+      <Gradient className="bg-secondary top-[60%] left-1/2 blur-[200px]" />
       <div className="container">
         <Heading className="mb-14">Management Team</Heading>
         <Slider
@@ -25,9 +28,14 @@ const Team = () => {
           speed={900}
           modules={[Navigation]}
         >
-          {data?.map(({ id, name, position, image }, index) => {
+          {data?.map((item, index) => {
+            const { id, name, position, image } = item;
             return (
-              <SwiperSlide key={id}>
+              <SwiperSlide
+                className="cursor-pointer"
+                onClick={() => openModal("team", item)}
+                key={id}
+              >
                 <div>
                   <Image
                     src={`/images/team/${image}`}
@@ -62,23 +70,31 @@ const data = [
     name: "Dr. Monika Singh ",
     position: "Lead Data Scientist",
     image: "monika.svg",
+    about:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
   },
   {
     id: "2",
     name: "Smitendu Das ",
     position: "Lead Data Scientist",
     image: "smitendu.svg",
+    about:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
   },
   {
     id: "3",
     name: "Mehak Parwani ",
     position: "Lead Data Scientist",
     image: "mehak.svg",
+    about:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
   },
   {
     id: "4",
     name: "Mehak Parwani ",
     position: "Lead Data Scientist",
     image: "mehak.svg",
+    about:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
   },
 ];

@@ -3,6 +3,7 @@ import Footer from "../organisms/Footer";
 import Header from "../organisms/Header";
 import EnquireModal from "../molecules/EnquireModal";
 import SectorModal from "../molecules/SectorModal";
+import TeamModal from "../molecules/TeamModal";
 
 const MainTemplate = ({ children }) => {
   return (
@@ -12,6 +13,7 @@ const MainTemplate = ({ children }) => {
       <Overlay />
       <EnquireModal />
       <SectorModal />
+      <TeamModal />
       <Footer />
     </>
   );
