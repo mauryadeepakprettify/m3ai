@@ -2,19 +2,25 @@
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../atoms/Button";
-import { quickList, servicesList } from "@/constants/navList";
+import { quickList, servicesList } from "@/utils/constants";
 import Input from "../atoms/Input";
 import ExternalBtn from "../atoms/ExternalBtn";
 import Gradient from "../atoms/Gradient";
+import { useModal } from "@/hooks/useModal";
 
 const Footer = () => {
+  const { openModal } = useModal();
+
   return (
     <footer className="border-secondary relative border-t">
-      <Gradient className="top-1/2 left-1/2 blur-[180px] bg-[#104AF7]" />
+      <Gradient className="top-1/2 left-1/2 bg-[#104AF7] blur-[180px]" />
       <div className="container-b">
         <div className="flex gap-[100px] pt-14 pb-16 text-white">
           <div className="flex-2">
-            <Button className="mb-5 w-full">
+            <Button
+              onClick={() => openModal("enquire")}
+              className="mb-5 w-full"
+            >
               <Image
                 className="group-hover:filter-[brightness(0)_invert(1)]"
                 src="/icons/phone.svg"
@@ -26,7 +32,7 @@ const Footer = () => {
             </Button>
             <Button className="mb-10 w-full" variant="fill">
               <Image
-                className="group-hover:filter-[brightness(1)_invert(0)]"
+                className="group-hover:filter-[brightness(0)_invert(0)]"
                 src="/icons/whatsapp.svg"
                 alt="whatsapp"
                 width={25}
@@ -131,9 +137,9 @@ const Footer = () => {
 
       <div className="container-b flex justify-between border-t border-[#ffffff2b] py-[30px]">
         <p className="text-alpha text-[14px] font-medium">
-          &copy; M3AI. All rights reserved.{" "}
+          &copy; M3AI. All rights reserved.
           <span>
-            Made by{" "}
+            Made by
             <Link href="https://prettifycreative.com/" target="_blank">
               <Image
                 className="inline-block h-5"

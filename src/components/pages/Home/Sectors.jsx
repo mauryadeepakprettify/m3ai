@@ -3,14 +3,14 @@
 import Gradient from "@/components/atoms/Gradient";
 import Heading from "@/components/atoms/Heading";
 import Slider from "@/components/molecules/Slider";
-import Image from "next/image";
 import { Navigation, Pagination } from "swiper/modules";
 import { SwiperSlide } from "swiper/react";
+import IndustryCard from "@/components/molecules/IndustryCard";
 
 const Sectors = () => {
   return (
     <section className="relative overflow-hidden py-10 pb-32 sm:pt-12 lg:pt-16">
-        <Gradient className="top-[80%] left-1/2 blur-[200px] bg-[#104AF7]"/>
+      <Gradient className="top-[80%] left-1/2 bg-[#104AF7] blur-[300px]" />
       <div className="container">
         <Heading className="mb-18">AI-Powered Impact Across Sectors</Heading>
 
@@ -29,22 +29,14 @@ const Sectors = () => {
           modules={[Pagination, Navigation]}
           className="pb-20!"
         >
-          {data?.map(({ id, title, icon }) => (
-            <SwiperSlide key={id}>
-              <div className="relative hover:bg-[#55A5D9] cursor-pointer transition-all duration-500 ease-in-out flex h-[168px] border border-[#aeaeae26] overflow-hidden flex-col items-center justify-center gap-4 rounded-[10px] before:absolute before:top-[80%] before:left-[80%] before:h-[85px] before:w-[85px] before:-translate-x-[50%] before:-translate-y-[50%] before:rounded-full before:bg-white before:blur-[60px] before:content-[''] after:content-[' '] after:absolute after:w-[85px] after:h-[85px] after:-z-10 after:bg-white after:blur-[60px] after:-late-x-1/2 after:-late-y-1/2 after:top-[20%] after:left-[20%]">
-                <Image
-                  className="h-auto w-auto"
-                  src={`/icons/${icon}`}
-                  alt={title}
-                  width={55}
-                  height={55}
-                />
-                <h5 className="text-center text-[20px] leading-[20px] font-semibold text-white">
-                  {title}
-                </h5>
-              </div>
-            </SwiperSlide>
-          ))}
+          {data?.map((item) => {
+            const { id, title, icon } = item;
+            return (
+              <SwiperSlide key={id}>
+                <IndustryCard title={title} icon={icon} data={item} />
+              </SwiperSlide>
+            );
+          })}
         </Slider>
       </div>
     </section>

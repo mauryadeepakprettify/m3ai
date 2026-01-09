@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 right-0 left-0 z-50 flex h-[78px] items-center justify-between px-4 text-white before:absolute before:inset-0 before:z-[-1] before:bg-black/80 before:shadow-lg before:shadow-[#63636333] before:transition-transform before:duration-500 before:ease-out sm:px-6 lg:px-8 ${isScrolled ? "before:translate-y-0" : "before:-translate-y-full"} `}
+      className={`fixed top-0 right-0 left-0 z-20 flex h-[78px] items-center justify-between px-4 text-white before:absolute before:inset-0 before:z-[-1] before:bg-black/80 before:shadow-lg before:shadow-[#63636333] before:transition-transform before:duration-500 before:ease-out sm:px-6 lg:px-8 ${isScrolled ? "before:translate-y-0" : "before:-translate-y-full"} `}
     >
       <Link href="/">
         <Image

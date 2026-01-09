@@ -7,7 +7,7 @@ import Sectors from "./Sectors";
 const HomePage = () => {
   return (
     <>
-      <Hero />
+      <Hero title="Meet M3 Ai" tagline="Engineering Intelligence for What Matters Most" video="cube-neon.mp4" scrollTo="/#mission-vision" />
       <MissionVision />
       <EnterpriseGrowth />
       <OurProducts />

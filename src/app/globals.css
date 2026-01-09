@@ -1,10 +1,12 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   --font-roobert: var(--font-roobert);
 
   --color-primary: #57dde6;
   --color-secondary: #3853a3;
+  --color-tertiary: #55a5d9;
   --color-alpha: #ffffffb2;
   --color-beta: #ffffff80;
 
@@ -43,6 +45,10 @@
   body::-webkit-scrollbar-thumb {
     @apply bg-primary;
   }
+
+  strong {
+    @apply text-white;
+  }
 }
 
 @layer components {
@@ -69,7 +75,7 @@
     @apply hidden;
   }
 
-  .swiper-pagination-fraction{
+  .swiper-pagination-fraction {
     @apply top-auto! -bottom-1! h-fit!;
   }
 }

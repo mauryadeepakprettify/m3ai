@@ -1,0 +1,53 @@
+"use client";
+import { useSelector } from "react-redux";
+import CloseModal from "../atoms/CloseModal";
+import Gradient from "../atoms/Gradient";
+import Image from "next/image";
+
+const SectorModal = () => {
+  const { isModal, modalData } = useSelector((state) => state.modal);
+  const { title, content } = modalData || {};
+
+  return (
+    <div
+      onClick={(e) => e.stopPropagation()}
+      className={`fixed left-1/2 z-30 h-[472px] w-[684px] -translate-x-1/2 overflow-hidden rounded-[10px] bg-[#0C1739] p-14 transition-all duration-500 ease-in-out ${
+        isModal === "sector"
+          ? "top-1/2 -translate-y-1/2 scale-100"
+          : "bottom-0 translate-y-full scale-0"
+      } `}
+    >
+      <Gradient className="-right-[30%] -bottom-[80%] bg-[#49BAC2] blur-[200px]" />
+      <Image
+        className="absolute bottom-0 left-0 w-[250px]"
+        src="/icons/ellipse.svg"
+        alt="ellipse"
+        width={500}
+        height={500}
+      />
+      <Image
+        className="absolute right-6 bottom-6"
+        src="/images/logo-white.svg"
+        alt="logo"
+        width={131}
+        height={45}
+      />
+      <div className="flex gap-26">
+        <h2 className="text-[36px] font-semibold text-white">{title}</h2>
+        <ul className="">
+          {content?.map((item, idx) => (
+            <li
+              key={idx}
+              className="text-alpha relative mb-6 text-[16px] font-medium before:absolute before:top-0 before:-left-10 before:h-[18px] before:w-[18px] before:rounded-full before:bg-linear-to-r before:from-[#9F2FFF] before:to-[#0BB1D3] before:content-['']"
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <CloseModal />
+    </div>
+  );
+};
+
+export default SectorModal;

@@ -13,7 +13,7 @@ const MissionVision = () => {
           <div className="flex flex-col justify-center gap-7">
             <Image
               src="/icons/m3ai-outline.webp"
-              alt="Mission Vision"
+              alt="M3ai"
               width={397}
               height={138}
             />

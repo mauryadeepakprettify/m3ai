@@ -6,7 +6,6 @@ import { Swiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import Image from "next/image";
 import SliderIcon from "../atoms/SliderIcon";
 
 const Slider = ({
