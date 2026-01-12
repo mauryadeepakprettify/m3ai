@@ -5,6 +5,7 @@ import Gradient from "../atoms/Gradient";
 import { navList } from "@/utils/constants";
 import Link from "next/link";
 import { useSelector } from "react-redux";
+import { setIsModal } from "@/store/slice/modalSlice";
 
 const MenuModal = () => {
   const { isModal } = useSelector((state) => state.modal);
@@ -27,7 +28,7 @@ const MenuModal = () => {
         <nav>
           <ul>
             {navList?.map(({ label, route }, index) => (
-              <li key={index} className="mb-5">
+              <li onClick={() => setIsModal(null)} key={index} className="mb-5">
                 <Link
                   className="hover:text-primary text-[28px] font-semibold text-white transition-all duration-500 ease-in-out"
                   href={route}
@@ -36,7 +37,7 @@ const MenuModal = () => {
                 </Link>
               </li>
             ))}
-            <li className="mb-5">
+            <li onClick={() => setIsModal(null)} className="mb-5">
               <Link
                 href="/contact"
                 className="hover:text-primary text-[28px] font-semibold text-white transition-all duration-500 ease-in-out"

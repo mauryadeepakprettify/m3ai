@@ -118,13 +118,16 @@ const Footer = () => {
                   name="email"
                   id="email"
                 />
-                <Button
-                  child="gradient"
-                  className="absolute top-1/2 right-0 -translate-y-1/2"
-                  type="submit"
-                >
+
+                <button className="gradient-secondary absolute top-1/2 right-0 flex -translate-y-1/2 items-center gap-2 bg-clip-text text-sm font-semibold text-transparent">
                   Subscribe
-                </Button>
+                  <Image
+                    src="/icons/top-right.svg"
+                    alt="arrow"
+                    width={16}
+                    height={16}
+                  />
+                </button>
               </form>
             </div>
             <Image

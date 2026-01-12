@@ -18,7 +18,7 @@ const Button = ({
   return (
     <button
       onClick={onClick}
-      className={`group cursor-pointer rounded-full px-[18px] py-[10px] font-semibold transition-colors duration-500 ease-in-out ${variants[variant]} ${className} ${child === "gradient" ? variants['outline'] : ""}`}
+      className={`group cursor-pointer rounded-full px-[18px] py-[10px] font-semibold transition-colors duration-500 ease-in-out ${variants[variant]} ${className} ${child === "gradient" ? variants["outline"] : ""}`}
       style={
         variant === "outline" || child === "gradient"
           ? {
@@ -31,9 +31,18 @@ const Button = ({
       }
     >
       <span
-        className={`relative z-10 flex items-center justify-center gap-2.5 ${child === "gradient" ? "from-secondary to-tertiary transition-colors duration-500 ease-in-out bg-linear-to-r bg-clip-text text-transparent group-hover:text-white" : ""}`}
+        className={`relative z-10 flex items-center justify-center gap-2.5 ${child === "gradient" ? "from-secondary to-tertiary bg-linear-to-r bg-clip-text text-transparent transition-colors duration-500 ease-in-out group-hover:text-white" : ""}`}
       >
-        {children} {child && <Image className="group-hover:filter-[brightness(0)_invert(1)] transition-colors duration-500 ease-in-out" src="/icons/top-right.svg" alt="" width={16} height={16} />}
+        {children}
+        {child && (
+          <Image
+            className="transition-colors text-sm md:text-base duration-500 ease-in-out group-hover:filter-[brightness(0)_invert(1)]"
+            src="/icons/top-right.svg"
+            alt=""
+            width={16}
+            height={16}
+          />
+        )}
       </span>
     </button>
   );
