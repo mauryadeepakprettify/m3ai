@@ -7,7 +7,7 @@ const ServiceList = () => {
       <Gradient className="absolute right-0 -bottom-[10%] bg-[#3853A3] blur-[200px]" />
       <Gradient className="absolute bottom-[10%] left-[30%] bg-[#3853A3] blur-[200px]" />
       <div className="container-b">
-        <div className="grid grid-cols-2 gap-5 lg:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-3">
           {data?.map(({ link, icon, title, description }) => (
             <ServiceCard
               key={title}
