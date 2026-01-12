@@ -11,7 +11,7 @@ const Team = () => {
   const { openModal } = useModal();
 
   return (
-    <section className="relative py-20">
+    <section className="relative py-12 pb-20 lg:py-20">
       <Gradient className="bg-secondary top-[60%] left-1/2 blur-[200px]" />
       <div className="container">
         <Heading className="mb-14">Management Team</Heading>

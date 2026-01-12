@@ -16,7 +16,7 @@ const MissionVision = () => {
               alt="M3ai"
               width={397}
               height={138}
-              className="w-[130px] md:w-[200px]"
+              className="w-[130px] md:w-[200px] lg:w-auto"
             />
             <p className="text-alpha max-w-[500px] text-center text-sm leading-[22px] font-semibold md:text-base md:leading-[24px] lg:text-left">
               M3 AI is an enterprise AI firm delivering tailored technology

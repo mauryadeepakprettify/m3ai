@@ -17,13 +17,13 @@ const IndustryCard = ({ title, icon, data }) => {
         <Gradient className="right-0 bottom-[20%] bg-[#FFFFFF] blur-[200px]" />
         <Gradient className="-right-[250%] -bottom-[250%] bg-[#FFFFFF] blur-[200px]" />
         <Image
-          className="h-auto w-auto"
+          className="lg:h-[55px] lg:w-[55px] h-[45px] w-[45px]"
           src={`/icons/${icon}`}
           alt={title}
           width={55}
           height={55}
         />
-        <h5 className="text-center text-[20px] leading-[20px] font-semibold text-white">
+        <h5 className="text-center  lg:text-[20px] lg:leading-[20px] text-[16px] leading-[16px] font-semibold text-white">
           {title}
         </h5>
       </div>

@@ -41,7 +41,7 @@ const Slider = ({
       </Swiper>
 
       <div
-        className={`absolute z-10 flex items-center justify-between ${paginationType === "fraction" ? "-bottom-3 left-1/2 w-[177px] -translate-x-1/2 rounded-full border border-white p-3" : "top-1/2 right-0 left-0 -translate-y-1/2"}`}
+        className={`absolute z-10 flex items-center justify-between ${paginationType === "fraction" ? "-bottom-3  left-1/2 w-[177px] -translate-x-1/2 rounded-full border border-white p-3" : "top-1/2 hidden md:block right-0 left-0 -translate-y-1/2"}`}
       >
         <button
           className={`swiper-prev-${id} rotate-180 cursor-pointer ${paginationType !== "fraction" ? "absolute -left-7" : ""}`}

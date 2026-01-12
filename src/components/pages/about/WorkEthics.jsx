@@ -3,34 +3,34 @@ import Image from "next/image";
 
 const WorkEthics = () => {
   return (
-    <section className="relative overflow-x-hidden pb-20">
+    <section className="relative lg:overflow-x-hidden pb-12 lg:pb-20">
       <Gradient className="absolute top-[50%] -right-[10%] bg-[#3853A3] blur-[200px]" />
       <div className="container">
-        <h2 className="mx-auto mb-28 max-w-[80%] text-center text-[80px] leading-[80px] font-semibold text-white">
+        <h2 className="mx-auto mb-12 text-center text-[32px] leading-[100%] font-semibold text-white lg:mb-28 max-w-[60%] lg:max-w-[80%] lg:text-[62px] xl:text-[80px]">
           Simplifying work to <span className="text-primary">amplify </span>
           outcomes
         </h2>
 
-        <div className="grid grid-cols-1 gap-20 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-20">
           {data?.map(({ title, description, icon }) => (
             <div
               key={title}
-              className="relative cursor-pointer overflow-hidden rounded-[10px] border border-[#aeaeae26] bg-[#ffffff1a] p-10 transition-all duration-500 ease-in-out"
+              className="relative cursor-pointer overflow-hidden rounded-[10px] border border-[#aeaeae26] bg-[#ffffff1a] p-6 transition-all duration-500 ease-in-out lg:p-10"
             >
               <Gradient className="-top-[50%] right-[65%] bg-[#FFFFFF] blur-[200px]" />
               <Gradient className="-right-[80%] -bottom-[80%] bg-[#FFFFFF] blur-[200px]" />
               <Image
-                className="absolute top-10 right-10"
+                className="absolute top-10 right-10 h-[48px] w-[48px] lg:h-[58px] lg:w-[58px]"
                 src={`/icons/${icon}`}
                 alt={title}
                 width={58}
                 height={58}
               />
-              <div className="mt-14 mb-14 max-w-[80%]">
-                <h3 className="mb-2 text-[24px] leading-[24px] font-semibold text-white">
+              <div className="mt-20 mb-8 max-w-full lg:mt-14 lg:mb-14 lg:max-w-[80%]">
+                <h3 className="mb-2 text-[20px] leading-[20px] font-semibold text-white lg:text-[24px] lg:leading-[24px]">
                   {title}
                 </h3>
-                <p className="text-alpha leading-[24px] font-medium">
+                <p className="text-alpha text-sm leading-[20px] font-medium lg:text-base lg:leading-[24px]">
                   {description}
                 </p>
               </div>
