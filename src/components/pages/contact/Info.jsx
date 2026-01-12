@@ -1,6 +1,7 @@
-import ExternalBtn from "@/components/atoms/ExternalBtn";
+import Button from "@/components/atoms/Button";
 import Gradient from "@/components/atoms/Gradient";
 import Image from "next/image";
+import Link from "next/link";
 
 const ContactInfo = () => {
   return (
@@ -29,7 +30,7 @@ const ContactInfo = () => {
               <p className="text-alpha leading-[24px] font-medium">
                 {description}
               </p>
-              {route && <ExternalBtn href={route}>Get Direction</ExternalBtn>}
+              {route && <Link href={route}><Button child="gradient">Get Direction</Button></Link>}
             </div>
           );
         })}

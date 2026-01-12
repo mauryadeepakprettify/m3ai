@@ -4,7 +4,6 @@ import Link from "next/link";
 import Button from "../atoms/Button";
 import { quickList, servicesList } from "@/utils/constants";
 import Input from "../atoms/Input";
-import ExternalBtn from "../atoms/ExternalBtn";
 import Gradient from "../atoms/Gradient";
 import { useModal } from "@/hooks/useModal";
 
@@ -15,11 +14,11 @@ const Footer = () => {
     <footer className="border-secondary relative border-t">
       <Gradient className="top-1/2 left-1/2 bg-[#104AF7] blur-[180px]" />
       <div className="container-b">
-        <div className="flex gap-[100px] pt-14 pb-16 text-white">
-          <div className="flex-2">
+        <div className="flex flex-col gap-[25px] pt-14 pb-16 text-white lg:flex-row lg:gap-[32px] xl:gap-[100px]">
+          <div className="flex flex-2 flex-col items-center lg:items-start">
             <Button
               onClick={() => openModal("enquire")}
-              className="mb-5 w-full"
+              className="mb-5 w-[250px] md:w-[300px] lg:w-full"
             >
               <Image
                 className="group-hover:filter-[brightness(0)_invert(1)]"
@@ -30,7 +29,10 @@ const Footer = () => {
               />
               Get in Touch M3 AI
             </Button>
-            <Button className="mb-10 w-full" variant="fill">
+            <Button
+              className="mb-8 w-[250px] md:w-[300px] lg:mb-10 lg:w-full"
+              variant="fill"
+            >
               <Image
                 className="group-hover:filter-[brightness(0)_invert(0)]"
                 src="/icons/whatsapp.svg"
@@ -40,7 +42,7 @@ const Footer = () => {
               />
               Whatsapp
             </Button>
-            <ul className="mb-10 flex gap-[18px]">
+            <ul className="mb-8 flex gap-[18px] lg:mb-10">
               <li>
                 <Link href="">
                   <Image
@@ -63,7 +65,7 @@ const Footer = () => {
               </li>
             </ul>
             <div className="">
-              <span className="text-alpha mb-3 block font-medium">
+              <span className="text-alpha mb-3 block text-center font-medium lg:text-left">
                 Connect us
               </span>
               <Link
@@ -74,7 +76,7 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <div className="flex-2">
+          <div className="mt-8 flex-2 lg:mt-0">
             <h5 className="mb-5 text-[18px] font-semibold text-white">
               Services
             </h5>
@@ -116,16 +118,17 @@ const Footer = () => {
                   name="email"
                   id="email"
                 />
-                <ExternalBtn
+                <Button
+                  child="gradient"
                   className="absolute top-1/2 right-0 -translate-y-1/2"
                   type="submit"
                 >
                   Subscribe
-                </ExternalBtn>
+                </Button>
               </form>
             </div>
             <Image
-              className="mt-20 w-full"
+              className="mx-auto mt-20 w-full md:w-1/2"
               src="/icons/m3ai-outline.webp"
               alt="icon"
               width={397}
@@ -135,7 +138,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="container-b flex justify-between border-t border-[#ffffff2b] py-[30px]">
+      <div className="container-b flex flex-col items-center justify-between gap-[14px] border-t border-[#ffffff2b] py-[20px] md:flex-row lg:py-[30px]">
         <p className="text-alpha text-[14px] font-medium">
           &copy; M3AI. All rights reserved.
           <span>
@@ -151,7 +154,7 @@ const Footer = () => {
             </Link>
           </span>
         </p>
-        <ul className="flex gap-10 [&>li]:text-[14px] [&>li]:font-medium [&>li]:text-white">
+        <ul className="flex gap-4 lg:gap-10 [&>li]:text-[14px] [&>li]:font-medium [&>li]:text-white">
           <li>
             <Link href="">Terms of Service</Link>
           </li>

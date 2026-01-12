@@ -1,31 +1,32 @@
 "use client";
 
-import ExternalBtn from "@/components/atoms/ExternalBtn";
+import Button from "@/components/atoms/Button";
 import Gradient from "@/components/atoms/Gradient";
 import Heading from "@/components/atoms/Heading";
 import Slider from "@/components/molecules/Slider";
 import Image from "next/image";
+import Link from "next/link";
 import { Navigation } from "swiper/modules";
 import { SwiperSlide } from "swiper/react";
 
 const OurProducts = () => {
   return (
-    <section className="relative py-10 sm:py-12 lg:py-16">
+    <section className="relative py-10 sm:py-12 lg:py-20">
       <Gradient className="top-[40%] left-1/2 bg-[#104AF7] blur-[200px]" />
       <div className="container">
-        <Heading className="mb-32">M3AI Products</Heading>
+        <Heading className="md:mb-16 lg:mb-32">M3AI Products</Heading>
 
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
-          <div className="relative">
+        <div className="grid grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-10">
+          <div className="relative h-[400px] md:flex md:h-[450px] md:items-center md:justify-center lg:h-auto">
             <Image
-              className="animate-floatUpDown absolute bottom-[35px] left-0 z-10"
+              className="animate-floatUpDown absolute bottom-[35px] left-1/2 z-10 -translate-x-1/2"
               src="/icons/hologram.svg"
               alt="creddt"
               width={453}
               height={382}
             />
             <Image
-              className="absolute bottom-0 left-0"
+              className="absolute bottom-0 left-1/2 -translate-x-1/2"
               src="/icons/mobile-shadow.svg"
               alt="creddt"
               width={455}
@@ -33,16 +34,16 @@ const OurProducts = () => {
             />
           </div>
           <div>
-            <div className="relative mb-10 before:absolute before:-bottom-5 before:left-0 before:h-[3px] before:w-[63px] before:bg-[#1B9BD5] before:content-['']">
-              <h3 className="relative mb-3 w-fit text-[48px] font-light text-white before:absolute before:top-0 before:-right-10 before:flex before:h-[25px] before:w-[25px] before:items-center before:justify-center before:rounded-full before:border-2 before:border-white before:text-center before:text-[13px] before:content-['R']">
+            <div className="relative mb-10 before:absolute before:-bottom-5 before:left-0 before:hidden before:h-[3px] before:w-[63px] before:bg-[#1B9BD5] before:content-[''] before:lg:block">
+              <h3 className="relative mx-auto mb-3 w-fit text-[32px] font-light text-white before:absolute before:top-0 before:-right-10 before:flex before:h-[20px] before:w-[20px] before:items-center before:justify-center before:rounded-full before:border-2 before:border-white before:text-center before:text-[13px] before:content-['R'] md:text-[36px] lg:mx-0 lg:mr-auto lg:text-[48px] before:lg:h-[25px] before:lg:w-[25px]">
                 CREDDT
               </h3>
-              <p className="text-alpha text-[18px] font-semibold">
+              <p className="text-alpha text-center text-[18px] font-semibold lg:text-left">
                 Commercial Real Estate Due Diligence Tools
               </p>
             </div>
 
-            <p className="text-alpha mb-6 leading-[24px] font-medium">
+            <p className="text-alpha mb-6 text-center text-[14px] leading-[20px] font-medium md:leading-[24px] lg:text-left">
               CREDDT is a commercial real estate due diligence and underwriting
               platform for loan sizing, securitization, and underwriting
               workflows.Included in its various functionalities, it can automate
@@ -75,7 +76,9 @@ const OurProducts = () => {
               ))}
             </Slider>
 
-            <ExternalBtn className="mt-6">Read more</ExternalBtn>
+            <Link className="mt-6 block" href="/about">
+              <Button child="gradient">Read More</Button>
+            </Link>
           </div>
         </div>
       </div>

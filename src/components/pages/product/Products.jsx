@@ -1,4 +1,4 @@
-import ExternalBtn from "@/components/atoms/ExternalBtn";
+import Button from "@/components/atoms/Button";
 import Gradient from "@/components/atoms/Gradient";
 import Image from "next/image";
 import Link from "next/link";
@@ -33,7 +33,7 @@ const Products = () => {
                 {content.description}
               </p>
               <Link href={`/product/${route}`}>
-                <ExternalBtn>Read More</ExternalBtn>
+                <Button child="gradient">Read More</Button>
               </Link>
             </div>
           </div>
