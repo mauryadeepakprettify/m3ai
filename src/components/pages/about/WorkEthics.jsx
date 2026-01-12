@@ -3,10 +3,10 @@ import Image from "next/image";
 
 const WorkEthics = () => {
   return (
-    <section className="relative lg:overflow-x-hidden pb-12 lg:pb-20">
+    <section className="relative pb-12 lg:overflow-x-hidden lg:pb-20">
       <Gradient className="absolute top-[50%] -right-[10%] bg-[#3853A3] blur-[200px]" />
       <div className="container">
-        <h2 className="mx-auto mb-12 text-center text-[32px] leading-[100%] font-semibold text-white lg:mb-28 max-w-[60%] lg:max-w-[80%] lg:text-[62px] xl:text-[80px]">
+        <h2 className="mx-auto mb-12 max-w-[60%] text-center text-[32px] leading-[100%] font-semibold text-white lg:mb-28 lg:max-w-[80%] lg:text-[62px] xl:text-[80px]">
           Simplifying work to <span className="text-primary">amplify </span>
           outcomes
         </h2>
