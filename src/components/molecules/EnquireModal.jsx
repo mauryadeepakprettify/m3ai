@@ -54,7 +54,7 @@ const EnquireModal = () => {
         className="flex flex-col items-center gap-3"
       >
         <Input
-          label="Name"
+          label="Name*"
           type="text"
           name="name"
           id="name"
@@ -63,7 +63,7 @@ const EnquireModal = () => {
           onChange={handleChange}
         />
         <Input
-          label="Email"
+          label="Email*"
           type="email"
           name="email"
           id="email"
@@ -72,7 +72,7 @@ const EnquireModal = () => {
           onChange={handleChange}
         />
         <Input
-          label="Phone"
+          label="Phone*"
           type="tel"
           name="phone"
           id="phone"
