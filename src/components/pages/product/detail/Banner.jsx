@@ -31,7 +31,7 @@ const ProductBanner = () => {
           <Slider
             loop={false}
             breakpoints={{
-              0: { slidesPerView: 1 },
+              0: { slidesPerView: 1.2 },
               540: { slidesPerView: 3 },
               768: { slidesPerView: 4 },
               991: { slidesPerView: 5 },
