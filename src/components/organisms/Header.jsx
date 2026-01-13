@@ -32,7 +32,7 @@ const Header = () => {
     >
       <Link href="/">
         <Image
-          className="w-18 md:h-auto md:w-auto"
+          className="w-[100px] md:h-auto md:w-auto"
           src="/images/logo.svg"
           alt="Logo"
           loading="eager"

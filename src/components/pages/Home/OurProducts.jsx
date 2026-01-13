@@ -15,7 +15,7 @@ const OurProducts = () => {
     <Animate className="relative py-10 sm:py-12 lg:py-20">
       <Gradient className="top-[40%] left-1/2 bg-[#104AF7] blur-[200px]" />
       <div className="container">
-        <Heading className="md:mb-16 lg:mb-32">M3AI Products</Heading>
+        <Heading className="mb-10 md:mb-16 lg:mb-32">M3AI Products</Heading>
 
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-10">
           <div className="relative h-[400px] md:flex md:h-[450px] md:items-center md:justify-center lg:h-auto">
