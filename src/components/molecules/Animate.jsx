@@ -20,7 +20,7 @@ const slideUpVariants = {
 const Animate = ({
   children,
   delay = 1,
-  duration = 4,
+  duration = 3,
   once = false,
   className = "",
 }) => {
