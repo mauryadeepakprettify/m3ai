@@ -12,14 +12,14 @@ const EnquireModal = () => {
   return (
     <div
       onClick={(e) => e.stopPropagation()}
-      className={`fixed left-1/2 z-30 w-[700px] -translate-x-1/2 overflow-hidden rounded-[10px] bg-[#0C1739] px-8 py-6 transition-all duration-500 ease-in-out ${
+      className={`fixed left-1/2 z-30 w-full -translate-x-1/2 overflow-hidden rounded-[10px] bg-[#0C1739] px-8 py-6 transition-all duration-500 ease-in-out md:w-[700px] ${
         isModal === "enquire"
           ? "top-1/2 -translate-y-1/2 scale-100"
           : "bottom-0 translate-y-full scale-0"
       } `}
     >
       <Gradient className="-bottom-[80%] left-[10%] bg-[#49BAC2] blur-[200px]" />
-      <h2 className="text-primary mb-5 text-center text-[28px] leading-[24px] font-bold">
+      <h2 className="text-primary mb-5 text-center text-[24px] leading-[24px] font-bold md:text-[28px]">
         Get in Touch
       </h2>
       <form className="flex flex-col items-center gap-3">
