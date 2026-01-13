@@ -7,13 +7,13 @@ import Image from "next/image";
 
 const Article = () => {
   return (
-    <section className="relative py-20">
+    <section className="relative py-12 lg:py-20">
       <Gradient className="top-[80%] right-0 bg-[#104AF7] blur-[300px]" />
       <Gradient className="top-[40%] left-[40%] bg-[#104AF7] blur-[300px]" />
 
       <div className="container-b">
-        <div className="grid grid-cols-6 gap-8">
-          <article className="prose prose-lg prose-li:marker:text-primary prose-li:marker:text-[28px] prose-invert col-span-4 leading-snug">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-7 xl:grid-cols-6">
+          <article className="prose prose-sm md:prose-base lg:prose-lg prose-li:marker:text-primary prose-li:marker:text-[28px] prose-invert col-span-1 leading-snug lg:col-span-4">
             <p>
               Our AI Workflows Orchestration service helps businesses unify
               fragmented processes, eliminate manual inefficiencies, and scale
@@ -77,15 +77,15 @@ const Article = () => {
               </li>
             </ul>
           </article>
-          <div className="sticky top-[78px] col-span-2 flex h-fit flex-col items-center justify-center rounded-[15px] bg-white/10 px-7 py-10">
+          <div className="flex h-fit flex-col items-center justify-center rounded-[15px] bg-white/10 px-7 py-10 lg:sticky lg:top-[78px] lg:col-span-3 xl:col-span-2">
             <Image
-              className="mb-4"
+              className="mb-4 h-[30px] w-[100px] lg:h-[45px] lg:w-[131px]"
               alt="logo"
               src="/images/logo-white.svg"
               width={131}
               height={45}
             />
-            <p className="mb-8 text-center text-[20px] leading-[28px] font-semibold text-white">
+            <p className="mb-8 text-center text-[16px] leading-[24px] font-semibold text-white lg:text-[20px] lg:leading-[28px]">
               Let’s build your AI-powered <br />
               future together
             </p>

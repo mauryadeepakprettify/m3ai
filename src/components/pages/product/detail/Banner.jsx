@@ -17,10 +17,10 @@ const ProductBanner = () => {
         className="h-full w-full object-cover"
       ></video>
       <div className="absolute top-[45%] left-1/2 z-30 container flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-2">
-        <h1 className="text-center text-[68px] font-semibold text-white">
+        <h1 className="text-center text-[36px] font-semibold text-white md:text-[42px] lg:text-[68px]">
           CREDDT
         </h1>
-        <p className="max-w-[600px] text-center leading-snug font-semibold text-white">
+        <p className="max-w-[600px] text-center text-sm leading-snug font-semibold text-white md:text-base lg:text-xl">
           Commercial Real Estate Due Diligence Tools
         </p>
       </div>

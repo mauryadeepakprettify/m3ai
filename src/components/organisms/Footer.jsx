@@ -131,7 +131,7 @@ const Footer = () => {
               </form>
             </div>
             <Image
-              className="mx-auto mt-20 w-full md:w-1/2"
+              className="mx-auto mt-20 w-full md:w-1/2 lg:w-full"
               src="/icons/m3ai-outline.webp"
               alt="icon"
               width={397}
