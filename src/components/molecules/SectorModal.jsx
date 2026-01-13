@@ -11,7 +11,7 @@ const SectorModal = () => {
   return (
     <div
       onClick={(e) => e.stopPropagation()}
-      className={`fixed left-1/2 z-30 h-[472px] w-[684px] -translate-x-1/2 overflow-hidden rounded-[10px] bg-[#0C1739] p-14 transition-all duration-500 ease-in-out ${
+      className={`fixed left-1/2 z-30 h-fit w-full -translate-x-1/2 overflow-hidden rounded-[10px] bg-[#0C1739] p-14 transition-all duration-500 ease-in-out md:h-[472px] md:w-[684px] ${
         isModal === "sector"
           ? "top-1/2 -translate-y-1/2 scale-100"
           : "bottom-0 translate-y-full scale-0"
@@ -19,7 +19,7 @@ const SectorModal = () => {
     >
       <Gradient className="-right-[30%] -bottom-[80%] bg-[#49BAC2] blur-[200px]" />
       <Image
-        className="absolute bottom-0 left-0 w-[250px]"
+        className="absolute bottom-0 left-0 w-[200px] md:w-[250px]"
         src="/icons/ellipse.svg"
         alt="ellipse"
         width={500}
@@ -32,8 +32,10 @@ const SectorModal = () => {
         width={131}
         height={45}
       />
-      <div className="flex gap-26">
-        <h2 className="text-[36px] font-semibold text-white">{title}</h2>
+      <div className="flex flex-col gap-8 pb-30 md:flex-row md:gap-26">
+        <h2 className="text-center text-[26px] font-semibold text-white md:text-left md:text-[32px] lg:text-[36px]">
+          {title}
+        </h2>
         <ul className="">
           {content?.map((item, idx) => (
             <li
