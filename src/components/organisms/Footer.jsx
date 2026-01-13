@@ -117,9 +117,10 @@ const Footer = () => {
                   type="email"
                   name="email"
                   id="email"
+                  required
                 />
 
-                <button className="gradient-secondary absolute top-1/2 right-0 flex -translate-y-1/2 items-center gap-2 bg-clip-text text-sm font-semibold text-transparent">
+                <button className="gradient-secondary absolute top-1/2 right-0 flex -translate-y-1/2 cursor-pointer items-center gap-2 bg-clip-text text-sm font-semibold text-transparent">
                   Subscribe
                   <Image
                     src="/icons/top-right.svg"
@@ -148,7 +149,7 @@ const Footer = () => {
             Made by
             <Link href="https://prettifycreative.com/" target="_blank">
               <Image
-                className="inline-block h-5"
+                className="inline-block h-5 w-auto"
                 src="/images/prettify.svg"
                 alt="prettify"
                 width={57}

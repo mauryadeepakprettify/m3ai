@@ -32,7 +32,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={roobert.variable}>
+    <html lang="en" data-scroll-behavior="smooth" className={roobert.variable}>
       <body className="antialiased">
         <ReduxProvider>
           <MainTemplate>{children}</MainTemplate>

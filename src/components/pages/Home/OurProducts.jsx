@@ -25,6 +25,7 @@ const OurProducts = () => {
               alt="creddt"
               width={453}
               height={382}
+              loading="eager"
             />
             <Image
               className="absolute bottom-0 left-1/2 -translate-x-1/2"

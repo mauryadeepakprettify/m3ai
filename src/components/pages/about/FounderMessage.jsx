@@ -15,6 +15,7 @@ const FounderMessage = () => {
               alt="founder"
               width={321}
               height={321}
+              loading="eager"
             />
           </figure>
           <div className="relative pt-8 pb-20 lg:py-32">

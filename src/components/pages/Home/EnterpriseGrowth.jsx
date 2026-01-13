@@ -42,8 +42,8 @@ const EnterpriseGrowth = () => {
                   className="z-0 h-full w-full object-cover transition-all duration-500 group-hover:scale-110"
                   src={`/images/service/${image}`}
                   alt={title}
-                  width={780}
-                  height={400}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 780px"
                 />
                 <div className="absolute right-0 bottom-0 left-0 z-20 flex items-end justify-between p-[30px]">
                   <div className="">

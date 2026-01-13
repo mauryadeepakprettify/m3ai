@@ -35,6 +35,7 @@ const Header = () => {
           className="w-18 md:h-auto md:w-auto"
           src="/images/logo.svg"
           alt="Logo"
+          loading="eager"
           width={131}
           height={45}
         />
