@@ -28,7 +28,7 @@ const ContactInfo = () => {
 
               <h6 className="text-[18px] font-bold text-white">{title}</h6>
               <Link href={route}>
-                <p className="text-alpha hover:text-primary transition-all duration-300 ease-in-out text-sm leading-[20px] font-medium lg:text-base lg:leading-[24px]">
+                <p className="text-alpha hover:text-primary text-sm leading-[20px] font-medium transition-all duration-300 ease-in-out lg:text-base lg:leading-[24px]">
                   {description}
                 </p>
               </Link>

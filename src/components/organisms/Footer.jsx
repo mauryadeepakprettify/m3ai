@@ -29,11 +29,12 @@ const Footer = () => {
               />
               Get in Touch M3 AI
             </Button>
-            <Link className=" w-[250px] md:w-[300px] lg:w-full" href="https://wa.me/911244130500" target="_blank">
-              <Button
-                className="mb-8 lg:mb-10 w-full"
-                variant="fill"
-              >
+            <Link
+              className="w-[250px] md:w-[300px] lg:w-full"
+              href="https://wa.me/911244130500"
+              target="_blank"
+            >
+              <Button className="mb-8 w-full lg:mb-10" variant="fill">
                 <Image
                   className="group-hover:filter-[brightness(0)_invert(0)]"
                   src="/icons/whatsapp.svg"
@@ -158,10 +159,10 @@ const Footer = () => {
         </p>
         <ul className="flex gap-4 lg:gap-10 [&>li]:text-[14px] [&>li]:font-medium [&>li]:text-white">
           <li>
-            <Link href="">Terms of Service</Link>
+            <Link href="/terms-condition">Terms of Service</Link>
           </li>
           <li>
-            <Link href="">Privacy Policy</Link>
+            <Link href="/privacy-policy">Privacy Policy</Link>
           </li>
         </ul>
       </div>

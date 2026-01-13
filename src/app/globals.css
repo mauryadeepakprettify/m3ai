@@ -49,6 +49,8 @@
   strong {
     @apply text-white;
   }
+
+  
 }
 
 @layer components {
