@@ -17,7 +17,7 @@ const Overview = () => {
               height={138}
             />
           </figure>
-          <div className="*:text-alpha *:mb-3 *:text-center *:text-sm *:leading-[22px] *:font-semibold *:lg:text-left *:lg:leading-[24px]">
+          <div className="*:text-alpha *:mb-3 *:text-center *:text-sm *:leading-[22px] *:md:lg:text-base *:font-semibold *:lg:text-left *:lg:leading-[24px]">
             <p>
               M3 AI is an enterprise AI firm delivering tailored technology
               solutions for complex business challenges.
