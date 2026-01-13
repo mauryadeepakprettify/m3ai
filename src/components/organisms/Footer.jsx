@@ -158,12 +158,16 @@ const Footer = () => {
           </span>
         </p>
         <ul className="flex gap-4 lg:gap-10 [&>li]:text-[14px] [&>li]:font-medium [&>li]:text-white">
-          <li>
-            <Link href="/terms-condition">Terms of Service</Link>
-          </li>
-          <li>
-            <Link href="/privacy-policy">Privacy Policy</Link>
-          </li>
+          {legal?.map(({ label, route }) => (
+            <li key={label}>
+              <Link
+                className="hover:text-primary transition-all duration-500 ease-in-out"
+                href={route}
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </footer>
@@ -182,5 +186,16 @@ const social = [
     icon: "instagram.svg",
     alt: "instagram",
     link: "#",
+  },
+];
+
+const legal = [
+  {
+    label: "Terms of Service",
+    route: "/terms-condition",
+  },
+  {
+    label: "Privacy Policy",
+    route: "/privacy-policy",
   },
 ];

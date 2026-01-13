@@ -53,7 +53,7 @@ const EnterpriseGrowth = () => {
                       {description}
                     </p>
                   </div>
-                  <button className="z-20 flex h-[41px] w-[41px] shrink-0 items-center justify-center rounded-full bg-white">
+                  <button className="z-20 flex cursor-pointer h-[41px] w-[41px] shrink-0 items-center justify-center rounded-full bg-white">
                     <Image
                       src="/icons/top-right-black.svg"
                       alt="top-right-black"
