@@ -36,7 +36,7 @@ const Button = ({
         {children}
         {child && (
           <Image
-            className="transition-colors text-sm md:text-base duration-500 ease-in-out group-hover:filter-[brightness(0)_invert(1)]"
+            className="transition-all text-sm md:text-base duration-500 ease-in-out group-hover:filter-[brightness(0)_invert(1)]"
             src="/icons/top-right.svg"
             alt=""
             width={16}

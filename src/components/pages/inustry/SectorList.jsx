@@ -7,7 +7,6 @@ const SectorList = () => {
         <div className="grid grid-cols-1   md:grid-cols-2 lg:grid-cols-4 gap-6">
           {data?.map((item, idx) => {
             const { id, title, icon } = item;
-            console.log(item);
             return (
               <IndustryCard key={id} title={title} icon={icon} data={item} />
             );
