@@ -108,8 +108,8 @@ const Footer = () => {
           </div>
           <div className="flex flex-3 flex-col justify-between">
             <div>
-              <h3 className="mb-2 text-[24px] leading-[28px] font-medium">
-                What's New at M3 AI <br /> newsletter subscription
+              <h3 className="mb-2 text-[18px] leading-[22px] font-medium lg:max-w-[300px] lg:text-[24px] lg:leading-[28px]">
+                What's New at M3 AI newsletter subscription
               </h3>
               <form className="relative" onSubmit={(e) => e.preventDefault()}>
                 <Input
@@ -132,7 +132,7 @@ const Footer = () => {
               </form>
             </div>
             <Image
-              className="mx-auto mt-20 w-full md:w-1/2 lg:w-full"
+              className="mx-auto mt-12 lg:mt-20 w-1/2 lg:w-full"
               src="/icons/m3ai-outline.webp"
               alt="icon"
               width={397}
