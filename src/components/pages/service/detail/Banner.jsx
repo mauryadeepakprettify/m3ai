@@ -6,7 +6,7 @@ import React from "react";
 import { Navigation } from "swiper/modules";
 import { SwiperSlide } from "swiper/react";
 
-const ServiceBanner = ({ img, className }) => {
+const ServiceBanner = ({ img, title, description, features, className }) => {
   return (
     <section
       className={`relative overflow-hidden ${className ? className : "h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-screen"}`}
@@ -21,10 +21,10 @@ const ServiceBanner = ({ img, className }) => {
 
       <div className="absolute top-1/2 left-1/2 w-full max-w-[450px] -translate-x-1/2 -translate-y-1/2 lg:left-[6%] lg:translate-x-0">
         <h1 className="mb-2 text-center text-[26px] leading-[100%] font-semibold text-white md:mb-4 md:text-[32px] lg:text-left xl:text-[48px]">
-          AI Workflows Orchestration
+          {title}
         </h1>
         <p className="text-center text-base leading-[100%] font-semibold text-white lg:text-left lg:text-[20px]">
-          Streamlining Complexity. Accelerating Outcomes.
+          {description}{" "}
         </p>
       </div>
 
@@ -49,7 +49,7 @@ const ServiceBanner = ({ img, className }) => {
             speed={900}
             modules={[Navigation]}
           >
-            {data?.map(({ id, description }, index) => (
+            {features?.map(({ id, description }, index) => (
               <SwiperSlide
                 className="border-[#FFFFFF29] py-[30px] pr-[20px] pl-[20px] not-last:border-r"
                 key={id}
@@ -69,29 +69,4 @@ const ServiceBanner = ({ img, className }) => {
 
 export default ServiceBanner;
 
-const data = [
-  {
-    id: 1,
-    description: "Faster processing times with zero errors",
-  },
-  {
-    id: 2,
-    description: "Faster processing times with zero errors",
-  },
-  {
-    id: 3,
-    description: "Faster processing times with zero errors",
-  },
-  {
-    id: 4,
-    description: "Faster processing times with zero errors",
-  },
-  {
-    id: 5,
-    description: "Faster processing times with zero errors",
-  },
-  {
-    id: 6,
-    description: "Faster processing times with zero errors",
-  },
-];
+
