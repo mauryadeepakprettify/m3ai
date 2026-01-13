@@ -1,6 +1,7 @@
 "use client";
 import Gradient from "@/components/atoms/Gradient";
 import Heading from "@/components/atoms/Heading";
+import Animate from "@/components/molecules/Animate";
 import Slider from "@/components/molecules/Slider";
 import { useModal } from "@/hooks/useModal";
 import Image from "next/image";
@@ -11,7 +12,7 @@ const Team = () => {
   const { openModal } = useModal();
 
   return (
-    <section className="relative py-12 pb-20 lg:py-20">
+    <Animate className="relative py-12 pb-20 lg:py-20">
       <Gradient className="bg-secondary top-[60%] left-1/2 blur-[200px]" />
       <div className="container">
         <Heading className="mb-14">Management Team</Heading>
@@ -58,7 +59,7 @@ const Team = () => {
           })}
         </Slider>
       </div>
-    </section>
+    </Animate>
   );
 };
 

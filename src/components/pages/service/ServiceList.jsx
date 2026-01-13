@@ -1,9 +1,10 @@
 import Gradient from "@/components/atoms/Gradient";
+import Animate from "@/components/molecules/Animate";
 import ServiceCard from "@/components/molecules/ServiceCard";
 
 const ServiceList = () => {
   return (
-    <section id="service" className="relative pt-20 pb-24">
+    <Animate id="service" className="relative pt-20 pb-24">
       <Gradient className="absolute right-0 -bottom-[10%] bg-[#3853A3] blur-[200px]" />
       <Gradient className="absolute bottom-[10%] left-[30%] bg-[#3853A3] blur-[200px]" />
       <div className="container-b">
@@ -19,7 +20,7 @@ const ServiceList = () => {
           ))}
         </div>
       </div>
-    </section>
+    </Animate>
   );
 };
 

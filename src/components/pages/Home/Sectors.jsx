@@ -6,10 +6,11 @@ import Slider from "@/components/molecules/Slider";
 import { Navigation, Pagination } from "swiper/modules";
 import { SwiperSlide } from "swiper/react";
 import IndustryCard from "@/components/molecules/IndustryCard";
+import Animate from "@/components/molecules/Animate";
 
 const Sectors = () => {
   return (
-    <section className="relative overflow-hidden pt-10 pb-16 lg:pt-20 lg:pb-32 sm:pt-12">
+    <Animate className="relative overflow-hidden pt-10 pb-16 lg:pt-20 lg:pb-32 sm:pt-12">
       <Gradient className="top-[80%] left-1/2 bg-[#104AF7] blur-[300px]" />
       <div className="container">
         <Heading className="mb-8 lg:mb-18">AI-Powered Impact Across Sectors</Heading>
@@ -39,7 +40,7 @@ const Sectors = () => {
           })}
         </Slider>
       </div>
-    </section>
+    </Animate>
   );
 };
 

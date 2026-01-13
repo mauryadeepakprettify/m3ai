@@ -1,13 +1,14 @@
 "use client";
 import Gradient from "@/components/atoms/Gradient";
 import Heading from "@/components/atoms/Heading";
+import Animate from "@/components/molecules/Animate";
 import Slider from "@/components/molecules/Slider";
 import { Navigation } from "swiper/modules";
 import { SwiperSlide } from "swiper/react";
 
 const WorkMethodology = () => {
   return (
-    <section className="relative py-10 sm:py-12 lg:pb-20">
+    <Animate className="relative py-10 sm:py-12 lg:pb-20">
       <Gradient className="top-[80%] left-1/2 bg-[#104AF7] blur-[300px]" />
 
       <div className="container-b">
@@ -39,7 +40,7 @@ const WorkMethodology = () => {
           })}
         </Slider>
       </div>
-    </section>
+    </Animate>
   );
 };
 

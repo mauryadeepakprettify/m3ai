@@ -1,6 +1,7 @@
 "use client";
 import Gradient from "@/components/atoms/Gradient";
 import Heading from "@/components/atoms/Heading";
+import Animate from "@/components/molecules/Animate";
 import Slider from "@/components/molecules/Slider";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,7 +10,7 @@ import { SwiperSlide } from "swiper/react";
 
 const EnterpriseGrowth = () => {
   return (
-    <section className="relative py-10 sm:py-12 lg:py-20">
+    <Animate className="relative py-10 sm:py-12 lg:py-20">
       <Gradient className="top-0 right-4 bg-[#3853A3] blur-[200px]" />
       <Gradient className="top-full left-[20%] bg-[#3853A3] blur-[200px]" />
       <div className="">
@@ -38,7 +39,7 @@ const EnterpriseGrowth = () => {
                 href={`/service/${route}`}
               >
                 <Image
-                  className="h-full z-0 w-full object-cover transition-all duration-500 group-hover:scale-110"
+                  className="z-0 h-full w-full object-cover transition-all duration-500 group-hover:scale-110"
                   src={`/images/service/${image}`}
                   alt={title}
                   width={780}
@@ -46,14 +47,14 @@ const EnterpriseGrowth = () => {
                 />
                 <div className="absolute right-0 bottom-0 left-0 z-20 flex items-end justify-between p-[30px]">
                   <div className="">
-                    <h3 className="mb-2 md:text-[24px] text-[22px] md:leading-[28px] leading-[22px] font-semibold text-white">
+                    <h3 className="mb-2 text-[22px] leading-[22px] font-semibold text-white md:text-[24px] md:leading-[28px]">
                       {title}
                     </h3>
-                    <p className="text-alpha lg:max-w-[75%] text-sm md:text-base leading-[20px] md:leading-[22px]  font-medium">
+                    <p className="text-alpha text-sm leading-[20px] font-medium md:text-base md:leading-[22px] lg:max-w-[75%]">
                       {description}
                     </p>
                   </div>
-                  <button className="z-20 flex cursor-pointer h-[41px] w-[41px] shrink-0 items-center justify-center rounded-full bg-white">
+                  <button className="z-20 flex h-[41px] w-[41px] shrink-0 cursor-pointer items-center justify-center rounded-full bg-white">
                     <Image
                       src="/icons/top-right-black.svg"
                       alt="top-right-black"
@@ -70,7 +71,7 @@ const EnterpriseGrowth = () => {
           );
         })}
       </Slider>
-    </section>
+    </Animate>
   );
 };
 

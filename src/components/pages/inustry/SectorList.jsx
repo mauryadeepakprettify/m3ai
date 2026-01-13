@@ -1,8 +1,9 @@
+import Animate from "@/components/molecules/Animate";
 import IndustryCard from "@/components/molecules/IndustryCard";
 
 const SectorList = () => {
   return (
-    <section className="pb-28">
+    <Animate className="pb-28">
       <div className="container-b">
         <div className="grid grid-cols-1   md:grid-cols-2 lg:grid-cols-4 gap-6">
           {data?.map((item, idx) => {
@@ -13,7 +14,7 @@ const SectorList = () => {
           })}
         </div>
       </div>
-    </section>
+    </Animate>
   );
 };
 

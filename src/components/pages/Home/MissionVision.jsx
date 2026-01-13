@@ -1,11 +1,12 @@
 import Button from "@/components/atoms/Button";
 import Gradient from "@/components/atoms/Gradient";
+import Animate from "@/components/molecules/Animate";
 import Image from "next/image";
 import Link from "next/link";
 
 const MissionVision = () => {
   return (
-    <section id="mission-vision" className="relative py-10 sm:py-12 lg:py-20">
+    <Animate id="mission-vision" className="relative py-10 sm:py-12 lg:py-20">
       <Gradient className="top-full left-1/2 bg-[#3853A3] blur-[200px]" />
 
       <div className="container">
@@ -35,7 +36,7 @@ const MissionVision = () => {
                 className="gradient-secondary rounded-[10px] px-7 py-6"
                 key={title}
               >
-                <h4 className="mb-2 text-center text-sm text-[24px] leading-[22px] font-medium text-white md:text-base md:leading-[24px] lg:text-left">
+                <h4 className="mb-2 text-center text-[20px] leading-[22px] font-medium text-white md:text-[24px] md:leading-[24px] lg:text-left">
                   {title}
                 </h4>
                 <p className="text-alpha text-center text-sm leading-[22px] font-medium md:text-base md:leading-[24px] lg:text-left">
@@ -46,7 +47,7 @@ const MissionVision = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Animate>
   );
 };
 

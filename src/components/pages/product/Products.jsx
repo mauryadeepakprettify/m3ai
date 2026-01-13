@@ -1,5 +1,6 @@
 import Button from "@/components/atoms/Button";
 import Gradient from "@/components/atoms/Gradient";
+import Animate from "@/components/molecules/Animate";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,7 +9,7 @@ const Products = () => {
     <section id="product" className="py-10 sm:py-12 lg:pt-32 lg:pb-20">
       <div className="container">
         {data?.map(({ id, image, content, route }, index) => (
-          <div
+          <Animate
             key={id}
             className="grid grid-cols-1 gap-8 not-last:mb-18 md:gap-12  lg:grid-cols-2 lg:gap-24 not-last:md:mb-32"
           >
@@ -43,7 +44,7 @@ const Products = () => {
                 <Button child="gradient">Read More</Button>
               </Link>
             </div>
-          </div>
+          </Animate>
         ))}
       </div>
     </section>

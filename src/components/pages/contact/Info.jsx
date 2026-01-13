@@ -1,5 +1,6 @@
 import Button from "@/components/atoms/Button";
 import Gradient from "@/components/atoms/Gradient";
+import Animate from "@/components/molecules/Animate";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,7 +12,7 @@ const ContactInfo = () => {
         Contact M3Ai
       </h1>
 
-      <div className="container-b relative z-20 flex flex-col justify-center gap-5 md:flex-row lg:absolute lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2">
+      <Animate className="container-b relative z-20 flex flex-col justify-center gap-5 md:flex-row lg:absolute lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2">
         {data?.map(({ title, description, icon, route }, index) => {
           return (
             <div
@@ -40,7 +41,7 @@ const ContactInfo = () => {
             </div>
           );
         })}
-      </div>
+      </Animate>
     </section>
   );
 };

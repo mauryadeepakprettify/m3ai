@@ -1,9 +1,10 @@
 import Gradient from "@/components/atoms/Gradient";
+import Animate from "@/components/molecules/Animate";
 import Image from "next/image";
 
 const Overview = () => {
   return (
-    <section id="overview" className="relative py-10 sm:py-12 lg:py-40">
+    <Animate id="overview" className="relative py-10 sm:py-12 lg:py-40">
       <Gradient className="-bottom-[60%] left-1/2 bg-[#3853A3] blur-[200px]" />
       <div className="container">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
@@ -29,7 +30,7 @@ const Overview = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Animate>
   );
 };
 

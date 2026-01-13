@@ -3,6 +3,7 @@
 import Button from "@/components/atoms/Button";
 import Gradient from "@/components/atoms/Gradient";
 import Heading from "@/components/atoms/Heading";
+import Animate from "@/components/molecules/Animate";
 import Slider from "@/components/molecules/Slider";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,7 +12,7 @@ import { SwiperSlide } from "swiper/react";
 
 const OurProducts = () => {
   return (
-    <section className="relative py-10 sm:py-12 lg:py-20">
+    <Animate className="relative py-10 sm:py-12 lg:py-20">
       <Gradient className="top-[40%] left-1/2 bg-[#104AF7] blur-[200px]" />
       <div className="container">
         <Heading className="md:mb-16 lg:mb-32">M3AI Products</Heading>
@@ -83,7 +84,7 @@ const OurProducts = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Animate>
   );
 };
 

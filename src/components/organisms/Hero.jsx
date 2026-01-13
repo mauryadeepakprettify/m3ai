@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Animate from "../molecules/Animate";
 
 const Hero = ({ video, title, tagline, className, scrollTo }) => {
   return (
@@ -13,7 +14,7 @@ const Hero = ({ video, title, tagline, className, scrollTo }) => {
         muted
         className="h-full w-full object-cover"
       ></video>
-      <div
+      <Animate
         className={`absolute right-0 bottom-1/2 lg:bottom-1/2 left-0 container flex translate-y-1/2 flex-col items-center justify-center gap-2`}
       >
         {tagline && (
@@ -27,7 +28,7 @@ const Hero = ({ video, title, tagline, className, scrollTo }) => {
             {title}
           </h1>
         )}
-      </div>
+      </Animate>
       {scrollTo && (
         <Link
           className="absolute bottom-[8%] left-1/2 -translate-x-1/2"

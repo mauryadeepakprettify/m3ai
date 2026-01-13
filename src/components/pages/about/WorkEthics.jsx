@@ -1,9 +1,10 @@
 import Gradient from "@/components/atoms/Gradient";
+import Animate from "@/components/molecules/Animate";
 import Image from "next/image";
 
 const WorkEthics = () => {
   return (
-    <section className="relative pb-12 lg:overflow-x-hidden lg:pb-20">
+    <Animate className="relative pb-12 lg:overflow-x-hidden lg:pb-20">
       <Gradient className="absolute top-[50%] -right-[10%] bg-[#3853A3] blur-[200px]" />
       <div className="container">
         <h2 className="mx-auto mb-12 max-w-[60%] text-center text-[32px] leading-[100%] font-semibold text-white lg:mb-28 lg:max-w-[80%] lg:text-[62px] xl:text-[80px]">
@@ -38,7 +39,7 @@ const WorkEthics = () => {
           ))}
         </div>
       </div>
-    </section>
+    </Animate>
   );
 };
 

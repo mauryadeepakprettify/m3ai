@@ -1,9 +1,10 @@
 import Gradient from "@/components/atoms/Gradient";
+import Animate from "@/components/molecules/Animate";
 import Image from "next/image";
 
 const FounderMessage = () => {
   return (
-    <section className="relative my-12 overflow-hidden rounded-[15px] lg:my-0">
+    <Animate className="relative my-12 overflow-hidden rounded-[15px] lg:my-0">
       <Gradient className="top-[80%] left-1/2 bg-[#104AF7] blur-[300px]" />
 
       <div className="container">
@@ -45,7 +46,7 @@ const FounderMessage = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Animate>
   );
 };
 

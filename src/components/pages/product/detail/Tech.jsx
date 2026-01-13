@@ -1,4 +1,5 @@
 import Gradient from "@/components/atoms/Gradient";
+import Animate from "@/components/molecules/Animate";
 import Image from "next/image";
 
 const Tech = () => {
@@ -23,7 +24,7 @@ const Tech = () => {
               height={318}
             />
           </figure>
-          <div className="">
+          <Animate className="">
             <ul className="">
               {data.map((item, index) => (
                 <li
@@ -33,7 +34,7 @@ const Tech = () => {
                 ></li>
               ))}
             </ul>
-          </div>
+          </Animate>
         </div>
       </div>
     </section>
