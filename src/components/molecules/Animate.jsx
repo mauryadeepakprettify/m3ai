@@ -11,7 +11,7 @@ const slideUpVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 2,
+      duration: 1,
       ease: "easeOut",
     },
   },
@@ -20,7 +20,7 @@ const slideUpVariants = {
 const Animate = ({
   children,
   delay = 1,
-  duration = 3,
+  duration = 4,
   once = false,
   className = "",
 }) => {
