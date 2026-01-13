@@ -6,7 +6,7 @@ const ProductEnquire = () => {
     <section className="relative overflow-hidden bg-white/10">
       <Gradient className="absolute top-[20%] left-1/2 bg-[#104AF7] blur-[200px]" />
 
-      <div className="">
+      <div className="lg:max-w-[650px] mx-auto">
         <ContactForm />
       </div>
     </section>
