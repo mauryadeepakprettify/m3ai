@@ -7,6 +7,7 @@ const Textarea = ({
   placeholder = "",
   rows = 4,
   className = "",
+  required = false,
 }) => {
   return (
     <div className={`relative w-full ${className}`}>
@@ -17,6 +18,7 @@ const Textarea = ({
         value={value}
         rows={rows}
         placeholder={placeholder}
+        required={required}
         className="peer border-beta focus:border-primary w-full resize-none border-b bg-transparent pt-5 pb-3 text-white transition-all duration-500 ease-in-out outline-none"
       />
       <label

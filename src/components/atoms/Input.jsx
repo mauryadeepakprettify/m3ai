@@ -6,6 +6,7 @@ const Input = ({
   onChange,
   value,
   placeholder = "",
+  required = false,
 }) => {
   return (
     <div className="relative w-full">
@@ -17,6 +18,7 @@ const Input = ({
         type={type}
         className="peer border-beta focus:border-primary w-full border-b bg-transparent pt-5 pb-3 text-white transition-all duration-500 ease-in-out outline-none"
         placeholder={placeholder}
+        required={required}
       />
       <label
         htmlFor={id}

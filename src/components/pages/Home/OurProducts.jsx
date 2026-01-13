@@ -51,6 +51,7 @@ const OurProducts = () => {
               and data tape creation from complex CRE materials.
             </p>
 
+            <div className="py-1">
             <Slider
               loop={false}
               breakpoints={{
@@ -75,7 +76,7 @@ const OurProducts = () => {
                 </SwiperSlide>
               ))}
             </Slider>
-
+            </div>
             <Link className="mt-6 block" href="/product/creddt">
               <Button child="gradient">Read More</Button>
             </Link>

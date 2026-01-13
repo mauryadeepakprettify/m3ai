@@ -19,11 +19,11 @@ const ContactForm = ({ className }) => {
         Let’s build your AI-powered future together
       </h6>
 
-      <form className="grid w-full max-w-[850px] grid-cols-1 gap-4 md:gap-6 md:grid-cols-2 lg:gap-8">
-        <Input type="text" name="Name" label="Name*" />
+      <form className="grid w-full max-w-[850px] grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:gap-8">
+        <Input type="text" name="Name" label="Name*" required />
         <Input type="text" name="Company" label="Company Name" />
-        <Input type="email" name="Email" label="Email*" />
-        <Input type="text" name="Phone" label="Phone*" />
+        <Input type="email" name="Email" label="Email*" required />
+        <Input type="text" name="Phone" label="Phone*" required />
         <Textarea className="md:col-span-2" name="Message" label="Message" />
         <span className="mt-4 md:col-span-2">
           <Button className="mx-auto block" variant="fill" type="submit">

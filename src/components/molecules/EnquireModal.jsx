@@ -5,9 +5,36 @@ import CloseModal from "../atoms/CloseModal";
 import Gradient from "../atoms/Gradient";
 import Input from "../atoms/Input";
 import Textarea from "../atoms/Textarea";
+import { useEffect, useState } from "react";
 
 const EnquireModal = () => {
   const { isModal } = useSelector((state) => state.modal);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+  };
+
+  useEffect(() => {
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    });
+  }, [isModal]);
 
   return (
     <div
@@ -22,12 +49,46 @@ const EnquireModal = () => {
       <h2 className="text-primary mb-5 text-center text-[24px] leading-[24px] font-bold md:text-[28px]">
         Get in Touch
       </h2>
-      <form className="flex flex-col items-center gap-3">
-        <Input label="Name" type="text" name="name" id="name" />
-        <Input label="Email" type="email" name="email" id="email" />
-        <Input label="Phone" type="tel" name="phone" id="phone" />
-        <Textarea label="Message" name="message" id="message" />
-        <Button className="mt-6" variant="fill">
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col items-center gap-3"
+      >
+        <Input
+          label="Name"
+          type="text"
+          name="name"
+          id="name"
+          required
+          value={formData.name}
+          onChange={handleChange}
+        />
+        <Input
+          label="Email"
+          type="email"
+          name="email"
+          id="email"
+          required
+          value={formData.email}
+          onChange={handleChange}
+        />
+        <Input
+          label="Phone"
+          type="tel"
+          name="phone"
+          id="phone"
+          required
+          value={formData.phone}
+          onChange={handleChange}
+        />
+        <Textarea
+          label="Message"
+          name="message"
+          id="message"
+          required
+          value={formData.message}
+          onChange={handleChange}
+        />
+        <Button type="submit" className="mt-6" variant="fill">
           Submit Now
         </Button>
       </form>

@@ -6,6 +6,7 @@ const Button = ({
   className = "",
   variant = "default",
   child = "",
+  type = "button",
 }) => {
   const variants = {
     outline:
@@ -18,6 +19,7 @@ const Button = ({
   return (
     <button
       onClick={onClick}
+      type={type}
       className={`group cursor-pointer rounded-full px-[18px] py-[10px] font-semibold transition-colors duration-500 ease-in-out ${variants[variant]} ${className} ${child === "gradient" ? variants["outline"] : ""}`}
       style={
         variant === "outline" || child === "gradient"

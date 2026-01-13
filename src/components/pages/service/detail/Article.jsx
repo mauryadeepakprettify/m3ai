@@ -93,11 +93,11 @@ const Article = () => {
               className="flex w-full flex-col items-center justify-center gap-3"
               onSubmit={() => {}}
             >
-              <Input type="text" name="name" label="Name*" />
-              <Input type="text" name="name" label="Company Name" />
-              <Input type="email" name="email" label="Email" />
-              <Input type="text" name="phone" label="Phone" />
-              <Textarea name="message" label="Message" />
+              <Input type="text" name="name" label="Name*" required />
+              <Input type="text" name="name" label="Company Name*" required />
+              <Input type="email" name="email" label="Email*" required />
+              <Input type="text" name="phone" label="Phone*" required />
+              <Textarea name="message" label="Message" required />
               <Button className="mt-4 w-fit" type="submit" variant="fill">
                 Submit
               </Button>
