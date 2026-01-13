@@ -54,35 +54,35 @@ const data = [
       "AI workflows orchestration empowers organizations to automate.",
   },
   {
-    link: "ai-workflows-orchestration",
+    link: "data-intelligence",
     icon: "server.svg",
     title: "Data Intelligence",
     description:
       "AI workflows orchestration empowers organizations to automate.",
   },
   {
-    link: "ai-workflows-orchestration",
+    link: "data-analytics",
     icon: "react.svg",
     title: "Data Analytics",
     description:
       "AI workflows orchestration empowers organizations to automate.",
   },
   {
-    link: "ai-workflows-orchestration",
+    link: "ai-native-product-development",
     icon: "code.svg",
     title: "AI Native Product Development",
     description:
       "AI workflows orchestration empowers organizations to automate.",
   },
   {
-    link: "ai-workflows-orchestration",
+    link: "agentic-architecture",
     icon: "grow.svg",
     title: "Agentic Architecture",
     description:
       "AI workflows orchestration empowers organizations to automate.",
   },
   {
-    link: "ai-workflows-orchestration",
+    link: "custom-slm",
     icon: "server.svg",
     title: "Custom SLMs",
     description:

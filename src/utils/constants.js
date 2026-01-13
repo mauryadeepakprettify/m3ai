@@ -20,31 +20,31 @@ export const navList = [
 export const servicesList = [
   {
     label: "AI workflows orchestration",
-    route: "/service-detail",
+    route: "/service/ai-workflows-orchestration",
   },
   {
     label: "Finetuning pretrained models",
-    route: "/service-detail",
+    route: "/service/finetuning-pretrained-models",
   },
   {
     label: "AI native product development",
-    route: "/service-detail",
+    route: "/service/ai-native-product-development",
   },
   {
     label: "Data analytics",
-    route: "/service-detail",
+    route: "/service/data-analytics",
   },
   {
     label: "Data intelligence",
-    route: "/service-detail",
+    route: "/service/data-intelligence",
   },
   {
     label: "Agentic architecture",
-    route: "/service-detail",
+    route: "/service/agentic-architecture",
   },
   {
     label: "Custom SLMs",
-    route: "/service-detail",
+    route: "/service/custom-slm",
   },
 ];
 

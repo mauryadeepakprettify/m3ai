@@ -5,32 +5,34 @@ import Link from "next/link";
 
 const ContactInfo = () => {
   return (
-    <section className="relative h-full lg:h-[750px] pt-28  md:pb-20 lg:py-0 overflow-x-hidden">
+    <section className="relative h-full overflow-x-hidden pt-28 md:pb-20 lg:h-[750px] lg:py-0">
       <Gradient className="bg-secondary absolute top-[45%] left-1/2 -z-10 h-[500px] w-[500px] blur-[140px]" />
-      <h1 className="lg:absolute top-[45%] text-center mb-10 lg:mb-0 left-1/2 z-20 lg:-translate-x-1/2 lg:-translate-y-1/2 font-semibold text-white text-[32px] md:text-[50px] lg:text-[60px] xl:text-[100px]">
+      <h1 className="top-[45%] left-1/2 z-20 mb-10 text-center text-[32px] font-semibold text-white md:text-[50px] lg:absolute lg:mb-0 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:text-[60px] xl:text-[100px]">
         Contact M3Ai
       </h1>
 
-      <div className="container-b lg:absolute relative lg:bottom-0 lg:left-1/2 z-20 flex lg:-translate-x-1/2  justify-center gap-5 flex-col md:flex-row ">
-        {data?.map(({ title, description, icon, route }) => {
+      <div className="container-b relative z-20 flex flex-col justify-center gap-5 md:flex-row lg:absolute lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2">
+        {data?.map(({ title, description, icon, route }, index) => {
           return (
             <div
               key={title}
-              className="relative flex min-h-[244px] md:w-[341px] flex-col gap-6 rounded-[10px] bg-white/10 px-4 py-6 lg:p-10"
+              className="relative flex min-h-[244px] flex-col gap-6 rounded-[10px] bg-white/10 px-4 py-6 md:w-[341px] lg:p-10"
             >
               <Image
                 src={`/icons/${icon}`}
                 alt={title}
                 width={40}
                 height={40}
-                className="absolute top-6 right-6 w-[30px] h-[30px] lg:w-[40px] lg:h-[40px]"
+                className="absolute top-6 right-6 h-[30px] w-[30px] lg:h-[40px] lg:w-[40px]"
               />
 
               <h6 className="text-[18px] font-bold text-white">{title}</h6>
-              <p className="text-alpha text-sm leading-[20px] lg:text-base lg:leading-[24px] font-medium">
-                {description}
-              </p>
-              {route && (
+              <Link href={route}>
+                <p className="text-alpha hover:text-primary transition-all duration-300 ease-in-out text-sm leading-[20px] font-medium lg:text-base lg:leading-[24px]">
+                  {description}
+                </p>
+              </Link>
+              {index === 0 && (
                 <Link href={route}>
                   <Button child="gradient">Get Direction</Button>
                 </Link>
@@ -58,10 +60,12 @@ const data = [
     icon: "send.svg",
     title: "Write Us",
     description: "info@M3AI.com",
+    route: "mailto:info@M3AI.com",
   },
   {
     icon: "call.svg",
     title: "Call Us",
     description: "+91-124-4130500",
+    route: "tel:+911244130500",
   },
 ];

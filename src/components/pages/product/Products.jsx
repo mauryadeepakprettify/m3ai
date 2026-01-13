@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Products = () => {
   return (
-    <section className="py-10 sm:py-12 lg:pt-32 lg:pb-20">
+    <section id="product" className="py-10 sm:py-12 lg:pt-32 lg:pb-20">
       <div className="container">
         {data?.map(({ id, image, content, route }, index) => (
           <div

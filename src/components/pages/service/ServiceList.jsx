@@ -3,7 +3,7 @@ import ServiceCard from "@/components/molecules/ServiceCard";
 
 const ServiceList = () => {
   return (
-    <section className="relative pt-20 pb-24">
+    <section id="service" className="relative pt-20 pb-24">
       <Gradient className="absolute right-0 -bottom-[10%] bg-[#3853A3] blur-[200px]" />
       <Gradient className="absolute bottom-[10%] left-[30%] bg-[#3853A3] blur-[200px]" />
       <div className="container-b">
@@ -34,35 +34,35 @@ const data = [
       "AI workflows orchestration empowers organizations to automate.",
   },
   {
-    link: "ai-workflows-orchestration",
+    link: "data-intelligence",
     icon: "server.svg",
     title: "Data Intelligence",
     description:
       "AI workflows orchestration empowers organizations to automate.",
   },
   {
-    link: "ai-workflows-orchestration",
+    link: "data-analytics",
     icon: "react.svg",
     title: "Data Analytics",
     description:
       "AI workflows orchestration empowers organizations to automate.",
   },
   {
-    link: "ai-workflows-orchestration",
+    link: "ai-native-product-development",
     icon: "code.svg",
     title: "AI Native Product Development",
     description:
       "AI workflows orchestration empowers organizations to automate.",
   },
   {
-    link: "ai-workflows-orchestration",
+    link: "agentic-architecture",
     icon: "grow.svg",
     title: "Agentic Architecture",
     description:
       "AI workflows orchestration empowers organizations to automate.",
   },
   {
-    link: "ai-workflows-orchestration",
+    link: "custom-slm",
     icon: "server.svg",
     title: "Custom SLMs",
     description:

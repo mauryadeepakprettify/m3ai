@@ -76,7 +76,7 @@ const OurProducts = () => {
               ))}
             </Slider>
 
-            <Link className="mt-6 block" href="/about">
+            <Link className="mt-6 block" href="/product/creddt">
               <Button child="gradient">Read More</Button>
             </Link>
           </div>

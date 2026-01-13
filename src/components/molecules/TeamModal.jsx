@@ -19,7 +19,7 @@ const TeamModal = () => {
       } `}
     >
       <Gradient className="-right-[20%] -bottom-[80%] bg-[#49BAC2] blur-[200px]" />
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-3  lg:gap-10">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:gap-10">
         <figure>
           <Image
             className="w-full md:w-fit"

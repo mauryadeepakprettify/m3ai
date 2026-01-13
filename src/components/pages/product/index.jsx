@@ -4,7 +4,7 @@ import Products from "./Products";
 const ProductPage = () => {
   return (
     <>
-      <Hero video="hologram.mp4" title="Products" scrollTo="#products" />
+      <Hero video="hologram.mp4" title="Products" scrollTo="#product" />
       <Products />
     </>
   );

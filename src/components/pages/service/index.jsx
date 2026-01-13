@@ -4,7 +4,7 @@ import ServiceList from "./ServiceList";
 const ServicePage = () => {
   return (
     <>
-      <Hero video="wave.mp4" title="Services" scrollTo="#services" />
+      <Hero video="wave.mp4" title="Services" scrollTo="#service" />
       <ServiceList />
     </>
   );

@@ -29,40 +29,39 @@ const Footer = () => {
               />
               Get in Touch M3 AI
             </Button>
-            <Button
-              className="mb-8 w-[250px] md:w-[300px] lg:mb-10 lg:w-full"
-              variant="fill"
-            >
-              <Image
-                className="group-hover:filter-[brightness(0)_invert(0)]"
-                src="/icons/whatsapp.svg"
-                alt="whatsapp"
-                width={25}
-                height={25}
-              />
-              Whatsapp
-            </Button>
-            <ul className="mb-8 flex gap-[18px] lg:mb-10">
-              <li>
-                <Link href="">
-                  <Image
-                    src="/icons/facebook.svg"
-                    alt="facebook"
-                    width={24}
-                    height={24}
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link href="">
-                  <Image
-                    src="/icons/instagram.svg"
-                    alt="instagram"
-                    width={24}
-                    height={24}
-                  />
-                </Link>
-              </li>
+            <Link className=" w-[250px] md:w-[300px] lg:w-full" href="https://wa.me/911244130500" target="_blank">
+              <Button
+                className="mb-8 lg:mb-10 w-full"
+                variant="fill"
+              >
+                <Image
+                  className="group-hover:filter-[brightness(0)_invert(0)]"
+                  src="/icons/whatsapp.svg"
+                  alt="whatsapp"
+                  width={25}
+                  height={25}
+                />
+                Whatsapp
+              </Button>
+            </Link>
+            <ul className="mb-8 flex gap-[16px] lg:mb-10">
+              {social?.map(({ icon, link, alt }) => (
+                <li key={alt}>
+                  <Link
+                    className="from-secondary to-primary block rounded-full p-1 transition-all duration-500 ease-in-out hover:bg-linear-to-r"
+                    href={link}
+                    target="_blank"
+                  >
+                    <Image
+                      className=""
+                      src={`/icons/${icon}`}
+                      alt={alt}
+                      width={24}
+                      height={24}
+                    />
+                  </Link>
+                </li>
+              ))}
             </ul>
             <div className="">
               <span className="text-alpha mb-3 block text-center font-medium lg:text-left">
@@ -171,3 +170,16 @@ const Footer = () => {
 };
 
 export default Footer;
+
+const social = [
+  {
+    icon: "facebook.svg",
+    alt: "facebook",
+    link: "#",
+  },
+  {
+    icon: "instagram.svg",
+    alt: "instagram",
+    link: "#",
+  },
+];
