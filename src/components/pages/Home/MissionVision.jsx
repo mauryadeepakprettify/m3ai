@@ -6,11 +6,11 @@ import Link from "next/link";
 
 const MissionVision = () => {
   return (
-    <Animate id="mission-vision" className="relative py-10 sm:py-12 lg:py-20">
+    <div id="mission-vision" className="relative py-10 sm:py-12 lg:py-20">
       <Gradient className="top-full left-1/2 bg-[#3853A3] blur-[200px]" />
 
       <div className="container">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-[32px] xl:gap-44">
+        <Animate className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-[32px] xl:gap-44">
           <div className="flex flex-col items-center justify-center gap-7 lg:items-start">
             <Image
               src="/icons/m3ai-outline.webp"
@@ -45,9 +45,9 @@ const MissionVision = () => {
               </div>
             ))}
           </div>
-        </div>
+        </Animate>
       </div>
-    </Animate>
+    </div>
   );
 };
 

@@ -2,6 +2,7 @@ import "./globals.css";
 import MainTemplate from "@/components/templates/MainTemplate";
 import ReduxProvider from "@/store/provider";
 import localFont from "next/font/local";
+import { Toaster } from "react-hot-toast";
 
 const roobert = localFont({
   src: [
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
     <html lang="en" data-scroll-behavior="smooth" className={roobert.variable}>
       <body className="antialiased">
         <ReduxProvider>
+          <Toaster position="top-center" reverseOrder={false} />
           <MainTemplate>{children}</MainTemplate>
         </ReduxProvider>
       </body>

@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const ContactInfo = () => {
   return (
-    <section className="relative h-full overflow-x-hidden pt-28 md:pb-20 lg:h-[750px] lg:py-0">
+    <section className="relative h-full overflow-hidden overflow-x-hidden pt-28 md:pb-20 lg:h-[750px] lg:py-0">
       <Gradient className="bg-secondary absolute top-[45%] left-1/2 -z-10 h-[500px] w-[500px] blur-[140px]" />
       <h1 className="top-[45%] left-1/2 z-20 mb-10 text-center text-[32px] font-semibold text-white md:text-[50px] lg:absolute lg:mb-0 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:text-[60px] xl:text-[100px]">
         Contact M3Ai

@@ -33,7 +33,7 @@ const Button = ({
       }
     >
       <span
-        className={`relative z-10 flex items-center justify-center gap-2.5 ${child === "gradient" ? "from-secondary to-tertiary bg-linear-to-r bg-clip-text text-transparent transition-colors duration-500 ease-in-out group-hover:text-white" : ""}`}
+        className={`relative z-10  flex items-center justify-center gap-2.5 ${child === "gradient" ? "from-secondary to-tertiary bg-linear-to-r bg-clip-text text-transparent transition-colors duration-500 ease-in-out group-hover:text-white" : ""}`}
       >
         {children}
         {child && (

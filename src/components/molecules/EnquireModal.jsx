@@ -6,6 +6,8 @@ import Gradient from "../atoms/Gradient";
 import Input from "../atoms/Input";
 import Textarea from "../atoms/Textarea";
 import { useEffect, useState } from "react";
+import { alertToast } from "@/lib/toast";
+import { emailRegex, mobileRegex } from "@/utils/regex";
 
 const EnquireModal = () => {
   const { isModal } = useSelector((state) => state.modal);
@@ -24,8 +26,38 @@ const EnquireModal = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+
+    const { name, email, phone, message } = formData;
+
+    if (!name || !email || !phone || !message) {
+      alertToast("Please fill all the fields");
+      return;
+    }
+
+    if (name.trim().length < 2) {
+      alertToast("Please enter a valid name");
+      return;
+    }
+
+    if (!emailRegex.test(email.trim())) {
+      alertToast("Please enter a valid email address");
+      return;
+    }
+
+    if (!mobileRegex.test(phone.trim())) {
+      alertToast("Please enter a valid 10-digit mobile number");
+      return;
+    }
+
+    if (message.trim().length < 10) {
+      alertToast("Message should be at least 10 characters");
+      return;
+    }
+
+    console.log("Validated Data:", formData);
+
   };
+
 
   useEffect(() => {
     setFormData({
@@ -39,11 +71,10 @@ const EnquireModal = () => {
   return (
     <div
       onClick={(e) => e.stopPropagation()}
-      className={`fixed left-1/2 z-30 w-full -translate-x-1/2 overflow-hidden rounded-[10px] bg-[#0C1739] px-8 py-6 transition-all duration-500 ease-in-out md:w-[700px] ${
-        isModal === "enquire"
-          ? "top-1/2 -translate-y-1/2 scale-100"
-          : "bottom-0 translate-y-full scale-0"
-      } `}
+      className={`fixed left-1/2 z-50 w-full -translate-x-1/2 overflow-hidden rounded-[10px] bg-[#0C1739] px-8 py-6 transition-all duration-500 ease-in-out md:w-[700px] ${isModal === "enquire"
+        ? "top-1/2 -translate-y-1/2 scale-100"
+        : "bottom-0 translate-y-full scale-0"
+        } `}
     >
       <Gradient className="-bottom-[80%] left-[10%] bg-[#49BAC2] blur-[200px]" />
       <h2 className="text-primary mb-5 text-center text-[24px] leading-[24px] font-bold md:text-[28px]">
@@ -58,7 +89,6 @@ const EnquireModal = () => {
           type="text"
           name="name"
           id="name"
-          required
           value={formData.name}
           onChange={handleChange}
         />
@@ -67,7 +97,6 @@ const EnquireModal = () => {
           type="email"
           name="email"
           id="email"
-          required
           value={formData.email}
           onChange={handleChange}
         />
@@ -76,15 +105,14 @@ const EnquireModal = () => {
           type="tel"
           name="phone"
           id="phone"
-          required
           value={formData.phone}
           onChange={handleChange}
         />
         <Textarea
-          label="Message"
+          label="Message*"
           name="message"
           id="message"
-          required
+
           value={formData.message}
           onChange={handleChange}
         />

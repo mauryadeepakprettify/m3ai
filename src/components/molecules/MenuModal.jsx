@@ -6,7 +6,6 @@ import { navList } from "@/utils/constants";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { setIsModal } from "@/store/slice/modalSlice";
-import { useEffect } from "react";
 
 const MenuModal = () => {
   const { isModal } = useSelector((state) => state.modal);

@@ -4,8 +4,61 @@ import Gradient from "@/components/atoms/Gradient";
 import Input from "@/components/atoms/Input";
 import Textarea from "@/components/atoms/Textarea";
 import Image from "next/image";
+import { useState } from "react";
 
 const Article = ({ content }) => {
+
+
+  const [formData, setFormData] = useState({
+    name: "",
+    company: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const { name, email, phone, message } = formData;
+
+    if (!name || !email || !phone || !message) {
+      alertToast("Please fill all the fields");
+      return;
+    }
+
+    if (name.trim().length < 2) {
+      alertToast("Please enter a valid name");
+      return;
+    }
+
+    if (!emailRegex.test(email.trim())) {
+      alertToast("Please enter a valid email address");
+      return;
+    }
+
+    if (!mobileRegex.test(phone.trim())) {
+      alertToast("Please enter a valid 10-digit mobile number");
+      return;
+    }
+
+    if (message.trim().length < 10) {
+      alertToast("Message should be at least 10 characters");
+      return;
+    }
+
+    console.log("Validated Data:", formData);
+
+  };
+
+
   return (
     <section className="relative py-12 lg:py-20">
       <Gradient className="top-[80%] right-0 bg-[#104AF7] blur-[300px]" />
@@ -31,13 +84,13 @@ const Article = ({ content }) => {
             </p>
             <form
               className="flex w-full flex-col items-center justify-center gap-3"
-              onSubmit={() => {}}
+              onSubmit={handleSubmit}
             >
-              <Input type="text" name="name" label="Name*" required />
-              <Input type="text" name="name" label="Company Name*" required />
-              <Input type="email" name="email" label="Email*" required />
-              <Input type="text" name="phone" label="Phone*" required />
-              <Textarea name="message" label="Message" required />
+              <Input type="text" name="name" label="Name*" onChange={handleChange} value={formData.name} />
+              <Input type="text" name="name" label="Company Name" onChange={handleChange} value={formData.name} />
+              <Input type="email" name="email" label="Email*" onChange={handleChange} value={formData.email} />
+              <Input type="text" name="phone" label="Phone*" onChange={handleChange} value={formData.phone} />
+              <Textarea name="message" label="Message*" onChange={handleChange} value={formData.message} />
               <Button className="mt-4 w-fit" type="submit" variant="fill">
                 Submit
               </Button>

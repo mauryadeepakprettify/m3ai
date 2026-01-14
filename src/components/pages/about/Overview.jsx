@@ -4,10 +4,10 @@ import Image from "next/image";
 
 const Overview = () => {
   return (
-    <Animate id="overview" className="relative py-10 sm:py-12 lg:py-40">
+    <div id="overview" className="relative py-10 sm:py-12 lg:py-40">
       <Gradient className="-bottom-[60%] left-1/2 bg-[#3853A3] blur-[200px]" />
       <div className="container">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
+        <Animate className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
           <figure>
             <Image
               className="mx-auto w-[130px] md:w-[200px] lg:mx-0 lg:h-[138px] lg:w-[397px]"
@@ -28,9 +28,9 @@ const Overview = () => {
               platforms that deliver measurable results and lasting impact.
             </p>
           </div>
-        </div>
+        </Animate>
       </div>
-    </Animate>
+    </div>
   );
 };
 

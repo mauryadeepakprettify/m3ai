@@ -5,7 +5,7 @@ const Textarea = ({
   onChange,
   value,
   placeholder = "",
-  rows = 4,
+  rows = 1,
   className = "",
   required = false,
 }) => {
