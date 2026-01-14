@@ -1,3 +1,4 @@
+"use client"
 import Gradient from "@/components/atoms/Gradient";
 import ContactForm from "@/components/molecules/ContactForm";
 

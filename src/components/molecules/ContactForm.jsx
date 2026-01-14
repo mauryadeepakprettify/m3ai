@@ -1,9 +1,11 @@
+"use client"
 import Image from "next/image";
 import Input from "../atoms/Input";
 import Textarea from "../atoms/Textarea";
 import Button from "../atoms/Button";
 import { alertToast } from "@/lib/toast";
 import { emailRegex, mobileRegex } from "@/utils/regex";
+import { useState } from "react";
 
 const ContactForm = ({ className }) => {
 
