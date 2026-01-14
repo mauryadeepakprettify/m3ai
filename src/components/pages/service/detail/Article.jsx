@@ -4,6 +4,7 @@ import Gradient from "@/components/atoms/Gradient";
 import Input from "@/components/atoms/Input";
 import Textarea from "@/components/atoms/Textarea";
 import Image from "next/image";
+import { useState } from "react";
 
 const Article = ({ content }) => {
 
