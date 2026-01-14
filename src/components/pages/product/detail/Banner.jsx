@@ -17,7 +17,7 @@ const ProductBanner = () => {
         muted
         className="h-full w-full object-cover"
       ></video>
-      <Animate className="absolute top-[45%] left-1/2 z-30 container flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-2">
+      <Animate className="absolute top-[45%] left-1/2 z-20 container flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-2">
         <h1 className="text-center text-[36px] font-semibold text-white md:text-[42px] lg:text-[68px]">
           CREDDT
         </h1>

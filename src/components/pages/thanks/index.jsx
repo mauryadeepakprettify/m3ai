@@ -10,7 +10,7 @@ const ThankYou = () => {
         Thank You!
       </h3>
       <p className="max-w-[600px] text-center text-sm leading-[20px] text-white md:text-base md:leading-[24px]">
-        We sincerely appreciate your engagement with FlexTron. Your request has
+        We sincerely appreciate your engagement with M3AI. Your request has
         been successfully received. Our team is now processing your information
         and will reach out to you soon with the next steps.{" "}
       </p>

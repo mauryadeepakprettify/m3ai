@@ -6,9 +6,31 @@ import { quickList, servicesList } from "@/utils/constants";
 import Input from "../atoms/Input";
 import Gradient from "../atoms/Gradient";
 import { useModal } from "@/hooks/useModal";
+import { useState } from "react";
+import { emailRegex } from "@/utils/regex";
+import { alertToast } from "@/lib/toast";
 
 const Footer = () => {
   const { openModal } = useModal();
+
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!email) {
+      alertToast("Please enter an email address");
+      return;
+    }
+
+    if (!emailRegex.test(email.trim())) {
+      alertToast("Please enter a valid email address");
+      return;
+    }
+
+    console.log("Validated Data:", email);
+
+  };
 
   return (
     <footer className="border-secondary relative border-t">
@@ -111,17 +133,18 @@ const Footer = () => {
               <h3 className="mb-2 text-[18px] leading-[22px] font-medium lg:max-w-[300px] lg:text-[24px] lg:leading-[28px]">
                 What's New at M3 AI newsletter subscription
               </h3>
-              <form className="relative" onSubmit={(e) => e.preventDefault()}>
+              <form onSubmit={handleSubmit} className="relative">
                 <Input
                   label="Enter email id"
                   type="email"
                   name="email"
                   id="email"
-                  required
+                  onChange={(e) => setEmail(e.target.value)}
+                  value={email}
                 />
 
-                <button className="gradient-secondary absolute top-1/2 right-0 flex -translate-y-1/2 cursor-pointer items-center gap-2 bg-clip-text text-sm font-semibold text-transparent">
-                  Subscribe
+                <button className=" absolute top-[62%]  right-0 flex -translate-y-1/2 cursor-pointer items-center gap-2 bg-black text-sm font-semibold ">
+                  <span className="gradient-secondary pl-2 py-2 text-transparent bg-clip-text">Subscribe</span>
                   <Image
                     src="/icons/top-right.svg"
                     alt="arrow"

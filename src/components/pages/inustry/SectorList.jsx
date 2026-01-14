@@ -3,18 +3,18 @@ import IndustryCard from "@/components/molecules/IndustryCard";
 
 const SectorList = () => {
   return (
-    <Animate className="pb-28">
+    <div className="pb-28">
       <div className="container-b">
-        <div className="grid grid-cols-1   md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <Animate className="grid grid-cols-1   md:grid-cols-2 lg:grid-cols-4 gap-6">
           {data?.map((item, idx) => {
             const { id, title, icon } = item;
             return (
               <IndustryCard key={id} title={title} icon={icon} data={item} />
             );
           })}
-        </div>
+        </Animate>
       </div>
-    </Animate>
+    </div>
   );
 };
 

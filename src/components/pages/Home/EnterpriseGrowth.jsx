@@ -29,7 +29,7 @@ const EnterpriseGrowth = () => {
           1400: { slidesPerView: 2 },
         }}
         paginationType="fraction"
-        className="pb-20!"
+        className="pb-20! px-4! md:px-0!"
       >
         {data?.map(({ route, image, title, description }, index) => {
           return (

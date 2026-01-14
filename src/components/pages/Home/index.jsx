@@ -7,11 +7,11 @@ import Sectors from "./Sectors";
 const HomePage = () => {
   return (
     <>
-      <Hero title="Meet M3 Ai" tagline="Engineering Intelligence for <br /> What Matters Most" video="cube-neon.mp4" scrollTo="/#mission-vision" />
+      <Hero title={<><span className='opacity-50'>Meet</span> M3 Ai</>} tagline="Engineering Intelligence for <br /> What Matters Most" video="cube-neon.mp4" scrollTo="/#mission-vision" />
       <MissionVision />
       <EnterpriseGrowth />
       <OurProducts />
-      <Sectors/>
+      <Sectors />
     </>
   );
 };

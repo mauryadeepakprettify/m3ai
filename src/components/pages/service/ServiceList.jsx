@@ -4,11 +4,11 @@ import ServiceCard from "@/components/molecules/ServiceCard";
 
 const ServiceList = () => {
   return (
-    <Animate id="service" className="relative pt-20 pb-24">
+    <div id="service" className="relative pt-20 pb-24">
       <Gradient className="absolute right-0 -bottom-[10%] bg-[#3853A3] blur-[200px]" />
       <Gradient className="absolute bottom-[10%] left-[30%] bg-[#3853A3] blur-[200px]" />
       <div className="container-b">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-3">
+        <Animate className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-3">
           {data?.map(({ link, icon, title, description }) => (
             <ServiceCard
               key={title}
@@ -18,9 +18,9 @@ const ServiceList = () => {
               description={description}
             />
           ))}
-        </div>
+        </Animate>
       </div>
-    </Animate>
+    </div>
   );
 };
 

@@ -8,7 +8,7 @@ const Overlay = () => {
 
   return (
     <div
-      className={`fixed inset-0 z-20 flex cursor-pointer items-center justify-center bg-black/50 transition-opacity duration-500 ease-in-out ${isModal ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
+      className={`fixed inset-0 z-40 flex cursor-pointer items-center justify-center bg-black/50 transition-opacity duration-500 ease-in-out ${isModal ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
       onClick={closeModal}
     ></div>
   );
