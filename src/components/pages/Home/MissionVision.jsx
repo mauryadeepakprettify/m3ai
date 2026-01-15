@@ -13,7 +13,7 @@ const MissionVision = () => {
         <Animate className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-[32px] xl:gap-44">
           <div className="flex flex-col items-center justify-center gap-7 lg:items-start">
             <Image
-              src="/icons/m3ai-outline.webp"
+              src="/icons/m3ai-outline.svg"
               alt="M3ai"
               width={397}
               height={138}

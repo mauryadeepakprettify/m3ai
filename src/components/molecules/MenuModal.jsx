@@ -19,7 +19,7 @@ const MenuModal = () => {
       <div>
         <Image
           className="h-auto w-28"
-          src="/icons/m3ai-outline.webp"
+          src="/icons/m3ai-outline.svg"
           alt="logo"
           width={120}
           height={40}
@@ -29,7 +29,7 @@ const MenuModal = () => {
         <nav>
           <ul>
             {navList?.map(({ label, route }, index) => (
-              <li  key={index} className="mb-5">
+              <li key={index} className="mb-5">
                 <Link
                   onClick={() => dispatch(setIsModal(null))}
                   className="hover:text-primary text-[28px] font-semibold text-white transition-all duration-500 ease-in-out"
