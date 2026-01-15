@@ -1,7 +1,7 @@
 import toast from "react-hot-toast";
 
 const baseStyle = {
-  background: "#141414", // NOT pure black
+  background: "#141414", 
   color: "#FFFFFF",
   fontSize: "14px",
   borderRadius: "6px",
