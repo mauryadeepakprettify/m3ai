@@ -8,7 +8,7 @@ const FounderMessage = () => {
       <Gradient className="top-[80%] left-1/2 bg-[#104AF7] blur-[300px]" />
 
       <div className="container">
-        <div className="grid gap-10  grid-cols-1 md:grid-cols-2">
+        <div className="grid gap-6 md:gap-10  grid-cols-1 md:grid-cols-2">
           <figure className="item-center flex justify-center">
             <Image
               src="/images/team/founder.svg"
@@ -18,7 +18,7 @@ const FounderMessage = () => {
               loading="eager"
             />
           </figure>
-          <div className="relative pt-8 pb-20 lg:py-32">
+          <div className="relative md:pt-20 pb-16 lg:py-32">
             <Image
               className="absolute right-0 bottom-0 lg:right-15"
               src="/icons/quote.svg"

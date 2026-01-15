@@ -156,7 +156,7 @@ const Footer = () => {
             </div>
             <Image
               className="mx-auto mt-12 lg:mt-20 w-1/2 lg:w-full"
-              src="/icons/m3ai-outline.webp"
+              src="/icons/m3ai-outline.svg"
               alt="icon"
               width={397}
               height={138}
