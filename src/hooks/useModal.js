@@ -9,6 +9,7 @@ export const useModal = () => {
     dispatch(setIsModal(type));
     dispatch(setModalData(data));
   };
+  
   const closeModal = () => dispatch(setIsModal(null));
 
   return { openModal, closeModal };

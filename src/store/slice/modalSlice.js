@@ -14,6 +14,7 @@ const modalSlice = createSlice({
       state.modalData = action.payload;
     },
   },
+
 });
 
 export const { setIsModal, setModalData } = modalSlice.actions;
